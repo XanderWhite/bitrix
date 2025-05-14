@@ -1,33 +1,63 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    line-height: 1.6;
+.page {
+	max-width: 1920px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	min-height: 100vh;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.container {
+	padding-left: clamp(1.25rem, -1.258rem + 11.46vw, 12.5rem);
+	padding-right: clamp(1.25rem, -1.258rem + 11.46vw, 12.5rem);
 }
 
-/* Хедер */
+.main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.reverse {
+	transform: scaleX(-1);
+}
+
+/* ============================= */
+/* HEADER */
+
 .header {
-    background-color: #1a1a2e;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+	padding-top: clamp(1.25rem, 0.971rem + 1.27vw, 2.5rem);
+	padding-bottom: clamp(1.25rem, 0.971rem + 1.27vw, 2.5rem);
+
+	border-bottom: 1px solid rgb(108, 110, 123);
 }
 
-.header__link {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	max-width: 400px;
 }
 
-.header__link:hover {
-    color: #e94560;
+.logo__svg {
+	width: 93px;
+	height: 66px;
+
+	transition: 0.3s;
+}
+
+.logo:hover .logo__svg,
+.logo:focus .logo__svg {
+animation: zoom .3s infinite alternate linear;
+}
+
+.logo__text {
+	font-family: "Segoe-UI-Regular";
+	color: #2c145e;
+	font-size: clamp(1.25rem, 1.139rem + 0.51vw, 1.75rem);
+	font-weight: 400;
+	line-height: 132%;
+	letter-spacing: 0.125em;
+	text-transform: uppercase;
 }
 
 /* Основной контент */
@@ -138,17 +168,24 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Футер */
+
+/* ============================= */
+/* FOOTER */
+
 .footer {
-    background-color: #1a1a2e;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+	padding-top: clamp(1.25rem, 0.637rem + 2.8vw, 4rem);
+	padding-bottom: clamp(1.25rem, 0.358rem + 4.08vw, 5.25rem);
+
+	border-top: 1px solid rgb(108, 110, 123);
 }
 
-.footer__copyright {
-    font-size: 14px;
+.footer__text {
+	font-size: 20px;
+	line-height: 160%;
 }
+
+
+
 
 /* Детальная страница */
 .breadcrumbs {

@@ -1,7 +1,9 @@
 <? require_once($_SERVER['DOCUMENT_ROOT'] . '/bitrix/header.php'); ?>
 
 <? // Верхний компонент - последняя новость
+die("Это МОЙ шаблон! Путь: " . __FILE__);
 ?>
+
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.list",
     "latest_news",
