@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001747224885';
-$dateexpire = '001747228485';
-$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:0:{}}';
+$datecreate = '001747317890';
+$dateexpire = '001747321490';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:1:{s:40:"tbl_b_hlsys_marking_code_group_filter_id";a:1:{s:4:"rows";s:1:"0";}}}';
 return true;
 ?>
