@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/components/dws/news.list/templates/ngtemplate/style.css" => "1747375419150","/local/templates/gn/components/bitrix/news/news1605/bitrix/news.detail/.default/style.css" => "1747374005155",]; ?>

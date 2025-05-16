@@ -1,11 +1,31 @@
 <?
-$aMenuLinks = Array(
-	Array(
+$aMenuLinks = array(
+	array(
+		"О нас",
+		"/about/",
+		array(),
+		array(),
+		""
+	),
+	array(
 		"news",
-		"/news.php",
-		Array(),
-		Array(),
+		"/news/",
+		array(),
+		array(),
+		""
+	),
+	array(
+		"company",
+		"/company/",
+		array(),
+		array(),
+		""
+	),
+	array(
+		"contacts",
+		"/contacts/",
+		array(),
+		array(),
 		""
 	)
 );
-?>

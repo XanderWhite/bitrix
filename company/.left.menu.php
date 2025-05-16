@@ -1,40 +1,33 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 <?
-$aMenuLinks = Array(
-	Array(
-		"О компании", 
-		"./", 
-		Array(), 
-		Array(), 
-		"" 
+$aMenuLinks = array(
+	array(
+		"Руководство",
+		"management.php",
+		array(),
+		array(),
+		""
 	),
-	Array(
-		"Руководство", 
-		"management.php", 
-		Array(), 
-		Array(), 
-		"" 
+	array(
+		"Миссия и стратегия",
+		"mission.php",
+		array(),
+		array(),
+		""
 	),
-	Array(
-		"Миссия и стратегия", 
-		"mission.php", 
-		Array(), 
-		Array(), 
-		"" 
+	array(
+		"История",
+		"history.php",
+		array(),
+		array(),
+		""
 	),
-	Array(
-		"История", 
-		"history.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Вакансии", 
-		"vacancies.php", 
-		Array(), 
-		Array(), 
-		"" 
+	array(
+		"Вакансии",
+		"vacancies.php",
+		array(),
+		array(),
+		""
 	)
 );
 ?>

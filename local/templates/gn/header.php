@@ -10,12 +10,9 @@
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/css/reset.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/css/fonts.css');
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/css/main.css');
-
 	?>
-
 	<? $APPLICATION->ShowHead(); ?>
 	<title><? $APPLICATION->ShowTitle(); ?></title>
-
 </head>
 
 <body>
@@ -37,5 +34,38 @@
 					),
 					false
 				); ?>
+				<div class="menu">
+					<? $APPLICATION->IncludeComponent(
+						"bitrix:menu",
+						"template123",
+						array(
+							"ALLOW_MULTI_SELECT" => "N",
+							"CHILD_MENU_TYPE" => "left",
+							"DELAY" => "N",
+							"MAX_LEVEL" => "1",
+							"MENU_CACHE_GET_VARS" => array(0 => "",),
+							"MENU_CACHE_TIME" => "3600",
+							"MENU_CACHE_TYPE" => "N",
+							"MENU_CACHE_USE_GROUPS" => "Y",
+							"ROOT_MENU_TYPE" => "top",
+							"USE_EXT" => "N"
+						)
+					); ?><? $APPLICATION->IncludeComponent(
+								"bitrix:menu",
+								"",
+								array(
+									"ALLOW_MULTI_SELECT" => "N",
+									"CHILD_MENU_TYPE" => "left",
+									"DELAY" => "N",
+									"MAX_LEVEL" => "1",
+									"MENU_CACHE_GET_VARS" => array(""),
+									"MENU_CACHE_TIME" => "3600",
+									"MENU_CACHE_TYPE" => "N",
+									"MENU_CACHE_USE_GROUPS" => "Y",
+									"ROOT_MENU_TYPE" => "left",
+									"USE_EXT" => "N"
+								)
+							); ?>
+				</div>
 			</div>
 		</header>

@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/components/dws/news.list/templates/ngtemplate/style.css" => "1747375419150",]; ?>
