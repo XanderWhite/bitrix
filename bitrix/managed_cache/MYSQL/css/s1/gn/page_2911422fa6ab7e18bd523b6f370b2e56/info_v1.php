@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/templates/gn/components/bitrix/system.pagenavigation/custom_pagination/style.css" => "17476706462404",]; ?>

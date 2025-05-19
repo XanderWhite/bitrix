@@ -1,0 +1,24 @@
+<?
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+if (!empty($arResult['PROPERTIES']['THEMES']['VALUE'])) {
+    $themeIds = $arResult['PROPERTIES']['THEMES']['VALUE'];
+
+    $res = CIBlockElement::GetList(
+        [],
+        ["ID" => $themeIds],
+        false,
+        false,
+        ["ID", "NAME"]
+    );
+
+    $themes = [];
+    while ($theme = $res->Fetch()) {
+        $themes[] = [
+            "NAME" => $theme["NAME"],
+            "URL" => "/news/?theme=" . $theme["ID"]
+        ];
+    }
+
+    $arResult["THEMES"] = $themes;
+}

@@ -1,7 +1,5 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
-
-
 <div class="last-news" style="background: url('<?= $arResult["ITEMS"][0]["PREVIEW_PICTURE"]["SRC"] ?>') #333 no-repeat center / cover;">
     <div class="last-news__inner container">
 

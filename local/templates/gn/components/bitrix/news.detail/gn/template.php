@@ -16,6 +16,17 @@
                     назад к новостям
                 </span>
             </a>
+
+            <?php if (!empty($arResult['THEMES'])): ?>
+                <div class="news-themes">
+                    <b>Темы:</b>
+                    <?php foreach ($arResult['THEMES'] as $theme) {
+                        $themes[] = '<a href=' . $theme["URL"] . ' class="theme-link">' . $theme['NAME'] . '</a>';
+                    }
+                    echo implode(', ', $themes);
+                    ?>
+                </div>
+            <?php endif; ?>
         </div>
 
         <?php if (!empty($arResult["DETAIL_PICTURE"]["SRC"])): ?>
@@ -27,5 +38,7 @@
                     alt="<?= !empty($arResult["DETAIL_PICTURE"]["ALT"]) ? $arResult["DETAIL_PICTURE"]["ALT"] : $arResult["NAME"] ?>">
             </div>
         <?php endif; ?>
+
+
     </div>
 </section>

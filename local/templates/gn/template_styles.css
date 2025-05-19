@@ -536,55 +536,6 @@ animation: zoom .3s infinite alternate linear;
 
 
 
-.text {
-  align-self: flex-end;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 16px;
-	align-items: center;
-	visibility: hidden;
-}
-
-.text a,
-.text b {
-	visibility: visible;
-  display: flex;
-	align-items: center;
-	padding: 16px 23px;
-
-	border-radius: 50px;
-	border: 2px solid rgb(132, 24, 68);
-
-	font-family: "OpenSans-SemiBold";
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 22px;
-	color: rgb(132, 24, 68);
-}
-
-/* Обычные ссылки
-.text a {
-  color: #0066cc;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-} */
-
-/* Активная страница */
-.text b {
-  background-color: rgb(132, 24, 68);
-	color: #fff;
-}
-
-/* Разделители (вертикальные черты) */
-
-
-/* Ховер-эффект */
-.text a:hover {
-   background-color: rgb(132, 24, 68);
-	color: #fff;
-	scale: 1.1;
-
-}
 
 /* Menu */
 .header__inner{
