@@ -61,31 +61,31 @@ $APPLICATION->SetTitle("Новости");
 		"STRICT_SECTION_CHECK" => "N"
 	)
 ); ?><?
-		$id = (int)($_GET['theme'] ?? 0);
-		$themeName = 'Новости';
+		$themeCode = $_GET['theme_code'];
+		if ($themeCode) {
+			$res = CIBlockElement::GetList(
+				array(),
+				array(
+					"IBLOCK_ID" => 5,
+					"CODE" => $themeCode,
+					"ACTIVE" => "Y"
+				),
+				false,
+				false,
+				array("ID", "NAME")
+			);
+		}
 
-		if ($id > 0) {
-			$res = CIBlockElement::GetByID($id);
-			if ($theme = $res->GetNext()) {
-				$APPLICATION->SetTitle("Новости по теме: " . $theme['NAME']);
-				$GLOBALS['themeFilter'] = ["PROPERTY_THEMES" => $id];
-			}
+
+		if (!empty($res) && $theme = $res->GetNext()) {
+			$APPLICATION->SetTitle("Новости по теме: " . $theme['NAME']);
+			$GLOBALS['themeFilter'] = ["PROPERTY_THEMES" => $theme['ID']];
 		}
 
 		$APPLICATION->IncludeComponent(
 			"bitrix:news.list",
 			"news_list",
 			array(
-				"SEF_MODE" => "Y",
-				"SEF_FOLDER" => "/news/",
-				"PAGER_BASE_LINK_ENABLE" => "Y",
-				"PAGER_BASE_LINK" => "/news/",
-				"PAGER_PARAMS_NAME" => "arrPager",
-
-
-
-
-
 				"ACTIVE_DATE_FORMAT" => "d.m.Y",
 				"ADD_SECTIONS_CHAIN" => "Y",
 				"AJAX_MODE" => "N",
@@ -117,7 +117,7 @@ $APPLICATION->SetTitle("Новости");
 				"INCLUDE_SUBSECTIONS" => "Y",
 				"MEDIA_PROPERTY" => "",
 				"MESSAGE_404" => "",
-				"NEWS_COUNT" => "2",
+				"NEWS_COUNT" => "1",
 				"PAGER_DESC_NUMBERING" => "N",
 				"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 				"PAGER_SHOW_ALL" => "N",
@@ -139,7 +139,7 @@ $APPLICATION->SetTitle("Новости");
 				"SET_META_KEYWORDS" => "Y",
 				"SET_STATUS_404" => "N",
 				"SET_TITLE" => "N",
-				"SHOW_404" => "N",
+				"SHOW_404" => "Y",
 				"SLIDER_PROPERTY" => "",
 				"SORT_BY1" => "ACTIVE_FROM",
 				"SORT_BY2" => "SORT",
@@ -149,7 +149,9 @@ $APPLICATION->SetTitle("Новости");
 				"TEMPLATE_THEME" => "blue",
 				"USE_RATING" => "N",
 				"USE_SHARE" => "N",
-				"COMPONENT_TEMPLATE" => "news_list"
+				"COMPONENT_TEMPLATE" => "news_list",
+				"PAGER_BASE_LINK_ENABLE" => "N",
+				"FILE_404" => ""
 			),
 			false
 		); ?>&nbsp;<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

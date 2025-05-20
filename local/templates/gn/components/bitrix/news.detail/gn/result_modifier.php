@@ -9,14 +9,14 @@ if (!empty($arResult['PROPERTIES']['THEMES']['VALUE'])) {
         ["ID" => $themeIds],
         false,
         false,
-        ["ID", "NAME"]
+        ["ID", "NAME", "CODE"]
     );
 
     $themes = [];
     while ($theme = $res->Fetch()) {
         $themes[] = [
             "NAME" => $theme["NAME"],
-            "URL" => "/news/?theme=" . $theme["ID"]
+            "URL" => "/news/themes/" . $theme["CODE"]
         ];
     }
 

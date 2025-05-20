@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001747663631';
-$dateexpire = '001747667231';
+$datecreate = '001747731334';
+$dateexpire = '001747734934';
 $ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:1:{s:6:"recent";a:5:{i:0;a:4:{s:3:"url";s:75:"/bitrix/admin/template_admin.php?lang=ru&back_url_pub=%2F%3Fclear_cache%3DY";s:4:"text";s:27:"Шаблоны сайтов";s:5:"title";s:60:"Шаблоны внешнего вида для сайтов";s:4:"icon";s:9:"undefined";}i:1;a:4:{s:3:"url";s:112:"/bitrix/admin/iblock_element_admin.php?IBLOCK_ID=1&type=news&lang=ru&apply_filter=Y&back_url_pub=%2Fnews%2F33%2F";s:4:"text";s:14:"Новости";s:5:"title";s:14:"Новости";s:4:"icon";s:9:"undefined";}i:2;a:4:{s:3:"url";s:133:"/bitrix/admin/iblock_element_admin.php?IBLOCK_ID=1&type=news&lang=ru&apply_filter=Y&back_url_pub=%2Fmoi-novosti.php%3Fclear_cache%3DY";s:4:"text";s:14:"Новости";s:5:"title";s:14:"Новости";s:4:"icon";s:9:"undefined";}i:3;a:4:{s:3:"url";s:115:"/bitrix/admin/iblock_element_admin.php?IBLOCK_ID=1&type=news&lang=ru&apply_filter=Y&back_url_pub=%2Fmoi-novosti.php";s:4:"text";s:14:"Новости";s:5:"title";s:14:"Новости";s:4:"icon";s:9:"undefined";}i:4;a:4:{s:3:"url";s:71:"/bitrix/admin/site_admin.php?lang=ru&back_url_pub=%2F%3Fclear_cache%3DY";s:4:"text";s:25:"Список сайтов";s:5:"title";s:50:"Управление сайтами системы";s:4:"icon";s:9:"undefined";}}}}';
 return true;
 ?>

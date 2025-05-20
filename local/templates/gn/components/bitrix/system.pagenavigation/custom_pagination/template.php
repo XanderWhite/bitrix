@@ -11,10 +11,11 @@ if (!$arResult["NavShowAlways"]) {
 		return;
 }
 
-$pageParam = "PAGEN_" . $arResult["NavNum"];
+$pageParam = "PAGEN_".$arResult["NavNum"];
 
-$currentUrl = $APPLICATION->GetCurPageParam("", array($pageParam));
+$currentUrl = $APPLICATION->GetCurPageParam("", array($pageParam, "theme_code"));
 $separator = strpos($currentUrl, '?') === false ? '?' : '&';
+
 ?>
 
 <div class="pagination">

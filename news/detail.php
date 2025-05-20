@@ -1,5 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+
+
 $APPLICATION->SetPageProperty("title", "мои новости с других планет");
 $APPLICATION->SetTitle("detail");
 ?><? $APPLICATION->IncludeComponent(
@@ -15,12 +17,6 @@ $APPLICATION->SetTitle("detail");
 				"bitrix:news.detail",
 				"gn",
 				array(
-					"SEF_MODE" => "Y",
-					"SEF_FOLDER" => "/news/",
-					"SEF_URL_TEMPLATES" => array(
-						"detail" => "#ELEMENT_ID#/",
-					),
-
 					"ACTIVE_DATE_FORMAT" => "d.m.Y",
 					"ADD_ELEMENT_CHAIN" => "N",
 					"ADD_SECTIONS_CHAIN" => "Y",
@@ -63,7 +59,7 @@ $APPLICATION->SetTitle("detail");
 					"SET_META_KEYWORDS" => "Y",
 					"SET_STATUS_404" => "N",
 					"SET_TITLE" => "Y",
-					"SHOW_404" => "N",
+					"SHOW_404" => "Y",
 					"STRICT_SECTION_CHECK" => "N",
 					"USE_PERMISSIONS" => "N",
 					"USE_SHARE" => "N",
