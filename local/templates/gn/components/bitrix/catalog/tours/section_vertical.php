@@ -11,17 +11,14 @@ use Bitrix\Main\ModuleManager;
  * @var array $arCurSection
  */
 
-if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMON_SETTINGS_BASKET_POPUP'] == 'Y')
-{
+if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMON_SETTINGS_BASKET_POPUP'] == 'Y') {
 	$basketAction = $arParams['COMMON_ADD_TO_BASKET_ACTION'] ?? '';
-}
-else
-{
+} else {
 	$basketAction = $arParams['SECTION_ADD_TO_BASKET_ACTION'] ?? '';
 }
 
 if ($isFilter || $isSidebar): ?>
-	<div class="col-md-3 col-sm-4 col-sm-push-8 col-md-push-9<?=(isset($arParams['FILTER_HIDE_ON_MOBILE']) && $arParams['FILTER_HIDE_ON_MOBILE'] === 'Y' ? ' hidden-xs' : '')?>">
+	<div class="col-md-3 col-sm-4 col-sm-push-8 col-md-push-9<?= (isset($arParams['FILTER_HIDE_ON_MOBILE']) && $arParams['FILTER_HIDE_ON_MOBILE'] === 'Y' ? ' hidden-xs' : '') ?>">
 		<? if ($isFilter): ?>
 			<div class="bx-sidebar-block">
 				<?
@@ -47,7 +44,7 @@ if ($isFilter || $isSidebar): ?>
 						'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
 						'CURRENCY_ID' => $arParams['CURRENCY_ID'],
 						"SEF_MODE" => $arParams["SEF_MODE"],
-						"SEF_RULE" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["smart_filter"],
+						"SEF_RULE" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["smart_filter"],
 						"SMART_FILTER_PATH" => $arResult["VARIABLES"]["SMART_FILTER_PATH"],
 						"PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
 						"INSTANT_RELOAD" => $arParams["INSTANT_RELOAD"],
@@ -56,6 +53,7 @@ if ($isFilter || $isSidebar): ?>
 					array('HIDE_ICONS' => 'Y')
 				);
 				?>
+
 			</div>
 		<? endif ?>
 		<? if ($isSidebar): ?>
@@ -64,7 +62,7 @@ if ($isFilter || $isSidebar): ?>
 				$APPLICATION->IncludeComponent(
 					"bitrix:main.include",
 					"",
-					Array(
+					array(
 						"AREA_FILE_SHOW" => "file",
 						"PATH" => $arParams["SIDEBAR_PATH"],
 						"AREA_FILE_RECURSIVE" => "N",
@@ -75,44 +73,37 @@ if ($isFilter || $isSidebar): ?>
 				);
 				?>
 			</div>
-		<?endif?>
+		<? endif ?>
 	</div>
-<?endif?>
-<div class="<?=(($isFilter || $isSidebar) ? "col-md-9 col-sm-8 col-sm-pull-4 col-md-pull-3" : "col-xs-12")?>">
+<? endif ?>
+<div class="<?= (($isFilter || $isSidebar) ? "col-md-9 col-sm-8 col-sm-pull-4 col-md-pull-3" : "col-xs-12") ?>">
 	<div class="row">
 		<div class="col-xs-12">
 			<?
-			if (ModuleManager::isModuleInstalled("sale"))
-			{
+			if (ModuleManager::isModuleInstalled("sale")) {
 				$arRecomData = array();
 				$recomCacheID = array('IBLOCK_ID' => $arParams['IBLOCK_ID']);
 				$obCache = new CPHPCache();
-				if ($obCache->InitCache(36000, serialize($recomCacheID), "/sale/bestsellers"))
-				{
+				if ($obCache->InitCache(36000, serialize($recomCacheID), "/sale/bestsellers")) {
 					$arRecomData = $obCache->GetVars();
-				}
-				elseif ($obCache->StartDataCache())
-				{
-					if (Loader::includeModule("catalog"))
-					{
+				} elseif ($obCache->StartDataCache()) {
+					if (Loader::includeModule("catalog")) {
 						$arSKU = CCatalogSku::GetInfoByProductIBlock($arParams['IBLOCK_ID']);
 						$arRecomData['OFFER_IBLOCK_ID'] = (!empty($arSKU) ? $arSKU['IBLOCK_ID'] : 0);
 					}
 					$obCache->EndDataCache($arRecomData);
 				}
 
-				if (!empty($arRecomData) && $arParams['USE_GIFTS_SECTION'] === 'Y')
-				{
-					?>
+				if (!empty($arRecomData) && $arParams['USE_GIFTS_SECTION'] === 'Y') {
+			?>
 					<div data-entity="parent-container">
 						<?
-						if (!isset($arParams['GIFTS_SECTION_LIST_HIDE_BLOCK_TITLE']) || $arParams['GIFTS_SECTION_LIST_HIDE_BLOCK_TITLE'] !== 'Y')
-						{
-							?>
+						if (!isset($arParams['GIFTS_SECTION_LIST_HIDE_BLOCK_TITLE']) || $arParams['GIFTS_SECTION_LIST_HIDE_BLOCK_TITLE'] !== 'Y') {
+						?>
 							<div class="catalog-block-header" data-entity="header" data-showed="false" style="display: none; opacity: 0;">
-								<?=($arParams['GIFTS_SECTION_LIST_BLOCK_TITLE'] ?: \Bitrix\Main\Localization\Loc::getMessage('CT_GIFTS_SECTION_LIST_BLOCK_TITLE_DEFAULT'))?>
+								<?= ($arParams['GIFTS_SECTION_LIST_BLOCK_TITLE'] ?: \Bitrix\Main\Localization\Loc::getMessage('CT_GIFTS_SECTION_LIST_BLOCK_TITLE_DEFAULT')) ?>
 							</div>
-							<?
+						<?
 						}
 
 						CBitrixComponent::includeComponentClass('bitrix:sale.products.gift.section');
@@ -128,7 +119,7 @@ if ($isFilter || $isSidebar): ?>
 								'SECTION_ID_VARIABLE' => $arParams['SECTION_ID_VARIABLE'],
 
 								'PRODUCT_ID_VARIABLE' => $arParams['PRODUCT_ID_VARIABLE'],
-								'ACTION_VARIABLE' => (!empty($arParams['ACTION_VARIABLE']) ? $arParams['ACTION_VARIABLE'] : 'action').'_spgs',
+								'ACTION_VARIABLE' => (!empty($arParams['ACTION_VARIABLE']) ? $arParams['ACTION_VARIABLE'] : 'action') . '_spgs',
 
 								'PRODUCT_ROW_VARIANTS' => \Bitrix\Main\Web\Json::encode(
 									SaleProductsGiftSectionComponent::predictRowVariants(
@@ -151,8 +142,8 @@ if ($isFilter || $isSidebar): ?>
 
 								'TEXT_LABEL_GIFT' => $arParams['GIFTS_DETAIL_TEXT_LABEL_GIFT'],
 
-								'LABEL_PROP_'.$arParams['IBLOCK_ID'] => array(),
-								'LABEL_PROP_MOBILE_'.$arParams['IBLOCK_ID'] => array(),
+								'LABEL_PROP_' . $arParams['IBLOCK_ID'] => array(),
+								'LABEL_PROP_MOBILE_' . $arParams['IBLOCK_ID'] => array(),
 								'LABEL_PROP_POSITION' => $arParams['LABEL_PROP_POSITION'] ?? '',
 
 								'ADD_TO_BASKET_ACTION' => $basketAction,
@@ -196,7 +187,7 @@ if ($isFilter || $isSidebar): ?>
 						);
 						?>
 					</div>
-					<?
+			<?
 				}
 			}
 			?>
@@ -213,17 +204,15 @@ if ($isFilter || $isSidebar): ?>
 				"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
 				"COUNT_ELEMENTS" => $arParams["SECTION_COUNT_ELEMENTS"],
 				"TOP_DEPTH" => $arParams["SECTION_TOP_DEPTH"],
-				"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
+				"SECTION_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["section"],
 				"VIEW_MODE" => $arParams["SECTIONS_VIEW_MODE"],
 				"SHOW_PARENT_NAME" => $arParams["SECTIONS_SHOW_PARENT_NAME"],
 				"HIDE_SECTION_NAME" => (isset($arParams["SECTIONS_HIDE_SECTION_NAME"]) ? $arParams["SECTIONS_HIDE_SECTION_NAME"] : "N"),
 				"ADD_SECTIONS_CHAIN" => (isset($arParams["ADD_SECTIONS_CHAIN"]) ? $arParams["ADD_SECTIONS_CHAIN"] : '')
 			);
-			if ($sectionListParams["COUNT_ELEMENTS"] === "Y")
-			{
+			if ($sectionListParams["COUNT_ELEMENTS"] === "Y") {
 				$sectionListParams["COUNT_ELEMENTS_FILTER"] = "CNT_ACTIVE";
-				if ($arParams["HIDE_NOT_AVAILABLE"] == "Y")
-				{
+				if ($arParams["HIDE_NOT_AVAILABLE"] == "Y") {
 					$sectionListParams["COUNT_ELEMENTS_FILTER"] = "CNT_AVAILABLE";
 				}
 			}
@@ -236,8 +225,7 @@ if ($isFilter || $isSidebar): ?>
 			);
 			unset($sectionListParams);
 
-			if ($arParams["USE_COMPARE"]=="Y")
-			{
+			if ($arParams["USE_COMPARE"] == "Y") {
 				$APPLICATION->IncludeComponent(
 					"bitrix:catalog.compare.list",
 					"",
@@ -245,8 +233,8 @@ if ($isFilter || $isSidebar): ?>
 						"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 						"IBLOCK_ID" => $arParams["IBLOCK_ID"],
 						"NAME" => $arParams["COMPARE_NAME"],
-						"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["element"],
-						"COMPARE_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["compare"],
+						"DETAIL_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["element"],
+						"COMPARE_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["compare"],
 						"ACTION_VARIABLE" => (!empty($arParams["ACTION_VARIABLE"]) ? $arParams["ACTION_VARIABLE"] : "action"),
 						"PRODUCT_ID_VARIABLE" => $arParams["PRODUCT_ID_VARIABLE"],
 						'POSITION_FIXED' => isset($arParams['COMPARE_POSITION_FIXED']) ? $arParams['COMPARE_POSITION_FIXED'] : '',
@@ -329,8 +317,8 @@ if ($isFilter || $isSidebar): ?>
 
 					"SECTION_ID" => $arResult["VARIABLES"]["SECTION_ID"],
 					"SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
-					"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
-					"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["element"],
+					"SECTION_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["section"],
+					"DETAIL_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["element"],
 					"USE_MAIN_ELEMENT_SECTION" => $arParams["USE_MAIN_ELEMENT_SECTION"],
 					'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
 					'CURRENCY_ID' => $arParams['CURRENCY_ID'],
@@ -377,7 +365,7 @@ if ($isFilter || $isSidebar): ?>
 					"ADD_SECTIONS_CHAIN" => "N",
 					'ADD_TO_BASKET_ACTION' => $basketAction,
 					'SHOW_CLOSE_POPUP' => isset($arParams['COMMON_SHOW_CLOSE_POPUP']) ? $arParams['COMMON_SHOW_CLOSE_POPUP'] : '',
-					'COMPARE_PATH' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['compare'],
+					'COMPARE_PATH' => $arResult['FOLDER'] . $arResult['URL_TEMPLATES']['compare'],
 					'COMPARE_NAME' => $arParams['COMPARE_NAME'],
 					'USE_COMPARE_LIST' => 'Y',
 					'BACKGROUND_IMAGE' => (isset($arParams['SECTION_BACKGROUND_IMAGE']) ? $arParams['SECTION_BACKGROUND_IMAGE'] : ''),
@@ -391,16 +379,13 @@ if ($isFilter || $isSidebar): ?>
 		<?
 		$GLOBALS['CATALOG_CURRENT_SECTION_ID'] = $intSectionID;
 
-		if (ModuleManager::isModuleInstalled("sale"))
-		{
-			if (!empty($arRecomData))
-			{
-				if (!isset($arParams['USE_BIG_DATA']) || $arParams['USE_BIG_DATA'] != 'N')
-				{
-					?>
+		if (ModuleManager::isModuleInstalled("sale")) {
+			if (!empty($arRecomData)) {
+				if (!isset($arParams['USE_BIG_DATA']) || $arParams['USE_BIG_DATA'] != 'N') {
+		?>
 					<div class="col-xs-12" data-entity="parent-container">
 						<div class="catalog-block-header" data-entity="header" data-showed="false" style="display: none; opacity: 0;">
-							<?=GetMessage('CATALOG_PERSONAL_RECOM')?>
+							<?= GetMessage('CATALOG_PERSONAL_RECOM') ?>
 						</div>
 						<?
 						$APPLICATION->IncludeComponent(
@@ -455,8 +440,8 @@ if ($isFilter || $isSidebar): ?>
 
 								"SECTION_ID" => $intSectionID,
 								"SECTION_CODE" => "",
-								"SECTION_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["section"],
-								"DETAIL_URL" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["element"],
+								"SECTION_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["section"],
+								"DETAIL_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["element"],
 								"USE_MAIN_ELEMENT_SECTION" => $arParams["USE_MAIN_ELEMENT_SECTION"],
 								'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
 								'CURRENCY_ID' => $arParams['CURRENCY_ID'],
@@ -509,7 +494,7 @@ if ($isFilter || $isSidebar): ?>
 								'TEMPLATE_THEME' => (isset($arParams['TEMPLATE_THEME']) ? $arParams['TEMPLATE_THEME'] : ''),
 								'ADD_TO_BASKET_ACTION' => $basketAction,
 								'SHOW_CLOSE_POPUP' => isset($arParams['COMMON_SHOW_CLOSE_POPUP']) ? $arParams['COMMON_SHOW_CLOSE_POPUP'] : '',
-								'COMPARE_PATH' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['compare'],
+								'COMPARE_PATH' => $arResult['FOLDER'] . $arResult['URL_TEMPLATES']['compare'],
 								'COMPARE_NAME' => $arParams['COMPARE_NAME'],
 								'USE_COMPARE_LIST' => 'Y',
 								'BACKGROUND_IMAGE' => '',
@@ -519,7 +504,7 @@ if ($isFilter || $isSidebar): ?>
 						);
 						?>
 					</div>
-					<?
+		<?
 				}
 			}
 		}

@@ -16,41 +16,6 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 $this->addExternalCss("/bitrix/css/main/bootstrap.css");
 
-$APPLICATION->IncludeComponent(
-	"bitrix:catalog.smart.filter",
-	"",
-	array(
-		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
-		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
-		"SECTION_ID" => $arCurSection['ID'],
-		"FILTER_NAME" => $arParams["FILTER_NAME"],
-		"PRICE_CODE" => $arParams["~PRICE_CODE"],
-		"CACHE_TYPE" => $arParams["CACHE_TYPE"],
-		"CACHE_TIME" => $arParams["CACHE_TIME"],
-		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
-		"SAVE_IN_SESSION" => "N",
-		"FILTER_VIEW_MODE" => $arParams["FILTER_VIEW_MODE"],
-		"XML_EXPORT" => "N",
-		"SECTION_TITLE" => "NAME",
-		"SECTION_DESCRIPTION" => "DESCRIPTION",
-		'HIDE_NOT_AVAILABLE' => $arParams["HIDE_NOT_AVAILABLE"],
-		"TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"],
-		'CONVERT_CURRENCY' => $arParams['CONVERT_CURRENCY'],
-		'CURRENCY_ID' => $arParams['CURRENCY_ID'],
-		"SEF_MODE" => $arParams["SEF_MODE"],
-		"SEF_RULE" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["smart_filter"],
-		"SMART_FILTER_PATH" => $arResult["VARIABLES"]["SMART_FILTER_PATH"],
-		"PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
-		"INSTANT_RELOAD" => $arParams["INSTANT_RELOAD"],
-	),
-	false
-);
-
-
-echo "<pre>";
-print_r($GLOBALS["arrFilter"]); // Проверяем, формируется ли фильтр
-echo "</pre>";
-
 $sectionListParams = array(
 	"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 	"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -63,7 +28,8 @@ $sectionListParams = array(
 	"VIEW_MODE" => $arParams["SECTIONS_VIEW_MODE"],
 	"SHOW_PARENT_NAME" => $arParams["SECTIONS_SHOW_PARENT_NAME"],
 	"HIDE_SECTION_NAME" => ($arParams["SECTIONS_HIDE_SECTION_NAME"] ?? "N"),
-	"ADD_SECTIONS_CHAIN" => ($arParams["ADD_SECTIONS_CHAIN"] ?? '')
+	"ADD_SECTIONS_CHAIN" => ($arParams["ADD_SECTIONS_CHAIN"] ?? ''),
+	"SECTION_ID" => "",
 );
 if ($sectionListParams["COUNT_ELEMENTS"] === "Y") {
 	$sectionListParams["COUNT_ELEMENTS_FILTER"] = "CNT_ACTIVE";
@@ -100,6 +66,7 @@ if ($arParams["USE_COMPARE"] === "Y") {
 	);
 }
 
+
 if ($arParams["SHOW_TOP_ELEMENTS"] !== "N") {
 	if (isset($arParams['USE_COMMON_SETTINGS_BASKET_POPUP']) && $arParams['USE_COMMON_SETTINGS_BASKET_POPUP'] === 'Y') {
 		$basketAction = $arParams['COMMON_ADD_TO_BASKET_ACTION'] ?? '';
@@ -111,6 +78,8 @@ if ($arParams["SHOW_TOP_ELEMENTS"] !== "N") {
 		"bitrix:catalog.top",
 		"",
 		array(
+			"FILTER_NAME" => "arrFilter",
+			"USE_FILTER" => "Y",
 			"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 			"IBLOCK_ID" => $arParams["IBLOCK_ID"],
 			"ELEMENT_SORT_FIELD" => $arParams["TOP_ELEMENT_SORT_FIELD"],
@@ -186,7 +155,7 @@ if ($arParams["SHOW_TOP_ELEMENTS"] !== "N") {
 			'COMPARE_PATH' => $arResult['FOLDER'] . $arResult['URL_TEMPLATES']['compare'],
 			'USE_COMPARE_LIST' => 'Y',
 
-			'COMPATIBLE_MODE' => ($arParams['COMPATIBLE_MODE'] ?? '')
+			'COMPATIBLE_MODE' => ($arParams['COMPATIBLE_MODE'] ?? ''),
 		),
 		$component
 	);

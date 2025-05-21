@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001747733347';
-$dateexpire = '001783733347';
+$datecreate = '001747837584';
+$dateexpire = '001783837584';
 $ser_content = 'a:2:{s:7:"CONTENT";s:3220:"<section class="news-detail-section container">
     <h2 class="news-detail-section__title">Возвращение этнографа</h2>
     <div class="news-detail-section__content">
