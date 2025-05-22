@@ -1,6 +1,13 @@
+<?
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+?>
 <section class="news-detail-section container">
-    <h2 class="news-detail-section__title"><?= $arResult["NAME"] ?></h2>
-    <div class="news-detail-section__content">
+    <div>
+        <h3 class="news-detail-section__subtitle">Новость #<?= $arResult['ID'] ?>:</h3>
+        <h2 class="news-detail-section__title"><?= $APPLICATION->getTitle() ?></h2>
+    </div>
+        <div class="news-detail-section__content">
         <div class="article news-detail-section__content__block">
             <span class="news-date"><?= $arResult["DISPLAY_ACTIVE_FROM"] ?></span>
             <div class="news-title active">

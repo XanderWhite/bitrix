@@ -436,6 +436,10 @@ animation: zoom .3s infinite alternate linear;
 	line-height: 1.4em;
 }
 
+.news-detail-section__subtitle{
+	font-size: 32px;
+}
+
 .news-detail-section__content {
 	display: flex;
 	gap: 40px;

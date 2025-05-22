@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/local/components/gn/news.list/templates/.default/style.css" => "1747375419150","/local/components/gn/news.list/templates/ngtemplate/style.css" => "1747375419150",]; ?>

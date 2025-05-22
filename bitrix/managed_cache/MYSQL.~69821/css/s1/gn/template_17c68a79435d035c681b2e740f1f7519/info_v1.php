@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/local/templates/gn/assets/css/reset.css" => "1747049622917","/local/templates/gn/assets/css/fonts.css" => "1747049622995","/local/templates/gn/assets/css/main.css" => "17470496226940","/bitrix/components/bitrix/system.show_message/templates/.default/style.css" => "174720392851","/local/templates/gn/template_styles.css" => "17473055518855",]; ?>

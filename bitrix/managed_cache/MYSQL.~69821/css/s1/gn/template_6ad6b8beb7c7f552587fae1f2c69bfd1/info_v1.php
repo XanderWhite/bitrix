@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/local/templates/gn/assets/css/reset.css" => "1747049622917","/local/templates/gn/assets/css/fonts.css" => "1747049622995","/local/templates/gn/assets/css/main.css" => "17470496226940","/local/templates/gn/template_styles.css" => "17473975289761",]; ?>

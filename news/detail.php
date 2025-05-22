@@ -3,7 +3,6 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 
 
 $APPLICATION->SetPageProperty("title", "мои новости с других планет");
-$APPLICATION->SetTitle("detail");
 ?><? $APPLICATION->IncludeComponent(
 		"bitrix:breadcrumb",
 		"crumbs",
@@ -59,6 +58,8 @@ $APPLICATION->SetTitle("detail");
 					"SET_META_KEYWORDS" => "Y",
 					"SET_STATUS_404" => "N",
 					"SET_TITLE" => "Y",
+					"SET_BROWSER_TITLE" => "Y",
+					"BROWSER_TITLE" => "-",
 					"SHOW_404" => "Y",
 					"STRICT_SECTION_CHECK" => "N",
 					"USE_PERMISSIONS" => "N",

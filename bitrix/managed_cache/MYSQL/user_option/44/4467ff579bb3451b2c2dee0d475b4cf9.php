@@ -1,0 +1,7 @@
+<?
+if($INCLUDE_FROM_CACHE!='Y')return false;
+$datecreate = '001747921230';
+$dateexpire = '001747924830';
+$ser_content = 'a:2:{s:7:"CONTENT";s:0:"";s:4:"VARS";a:6:{s:14:"form_element_5";a:1:{s:4:"tabs";s:181:"edit1--#--Параметры--,--ID--#--ID--,--DATE_CREATE--#--Создан--,--ACTIVE--#--Активность--,--NAME--#--*Название--,--SORT--#--Сортировка--;--";}s:14:"form_element_6";a:1:{s:4:"tabs";s:181:"edit1--#--Параметры--,--ID--#--ID--,--DATE_CREATE--#--Создан--,--ACTIVE--#--Активность--,--NAME--#--*Название--,--SORT--#--Сортировка--;--";}s:14:"form_element_7";a:1:{s:4:"tabs";s:181:"edit1--#--Параметры--,--ID--#--ID--,--DATE_CREATE--#--Создан--,--ACTIVE--#--Активность--,--NAME--#--*Название--,--SORT--#--Сортировка--;--";}s:14:"form_element_8";a:1:{s:4:"tabs";s:431:"edit1--#--Параметры--,--ID--#--ID--,--DATE_CREATE--#--Создан--,--ACTIVE--#--Активность--,--NAME--#--*Название--,--SORT--#--Сортировка--,--IBLOCK_ELEMENT_PROP_VALUE--#----Значения свойств--,--PROPERTY_12--#--*Страны--,--PROPERTY_13--#--*Тематика путешествий--,--PROPERTY_14--#--*Тип--,--DETAIL_PICTURE--#--Детальная картинка--;--";}s:14:"form_section_6";a:1:{s:4:"tabs";s:148:"edit1--#--Раздел--,--ID--#--ID--,--DATE_CREATE--#--Создан--,--ACTIVE--#--Раздел активен--,--NAME--#--*Название--;--";}s:14:"form_section_7";a:1:{s:4:"tabs";s:148:"edit1--#--Раздел--,--ID--#--ID--,--DATE_CREATE--#--Создан--,--ACTIVE--#--Раздел активен--,--NAME--#--*Название--;--";}}}';
+return true;
+?>

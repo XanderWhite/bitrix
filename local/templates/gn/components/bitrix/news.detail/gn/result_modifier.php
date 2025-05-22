@@ -20,5 +20,11 @@ if (!empty($arResult['PROPERTIES']['THEMES']['VALUE'])) {
         ];
     }
 
+    if (!empty($arResult['NAME'])) {
+        $APPLICATION->SetPageProperty("title", "Галактический вестник. " . $arResult['NAME']);
+        $APPLICATION->SetTitle($arResult['NAME']);
+    }
+
     $arResult["THEMES"] = $themes;
+
 }

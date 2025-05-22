@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/bitrix/components/bitrix/search.tags.input/templates/.default/script.js" => "17472039818379",]; ?>

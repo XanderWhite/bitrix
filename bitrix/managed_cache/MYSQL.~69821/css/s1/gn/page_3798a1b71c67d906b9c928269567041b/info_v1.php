@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/bitrix/components/bitrix/search.tags.input/templates/.default/style.css" => "1747203981497",]; ?>

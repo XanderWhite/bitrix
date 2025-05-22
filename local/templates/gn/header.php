@@ -70,6 +70,20 @@
 					);
 					?>
 				</div>
+				<div class="auth">
+					<? $APPLICATION->IncludeComponent(
+	"bitrix:system.auth.form", 
+	"auth.form", 
+	array(
+		"FORGOT_PASSWORD_URL" => "",
+		"PROFILE_URL" => "",
+		"REGISTER_URL" => "/login/index.php",
+		"SHOW_ERRORS" => "N",
+		"COMPONENT_TEMPLATE" => "auth.form"
+	),
+	false
+); ?>
+				</div>
 			</div>
 
 		</header>

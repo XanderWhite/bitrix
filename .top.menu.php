@@ -1,46 +1,45 @@
 <?
-$aMenuLinks = Array(
-	Array(
+$aMenuLinks = array(
+	array(
 		"О нас",
 		"/about/",
-		Array(),
-		Array(),
+		array(),
+		array(),
 		""
 	),
-	Array(
+	array(
 		"Новости",
 		"/news/",
-		Array(),
-		Array(),
+		array(),
+		array(),
 		""
 	),
-	Array(
+	array(
 		"Туры",
-		"/tours/",
-		Array(),
-		Array(),
+		"/tours/?SECTION_ID=16",
+		array(),
+		array(),
 		""
 	),
-	Array(
+	array(
 		"Компания",
 		"/company/",
-		Array(),
-		Array(),
+		array(),
+		array(),
 		""
 	),
-	Array(
+	array(
 		"Контакты",
 		"/contacts/",
-		Array(),
-		Array(),
+		array(),
+		array(),
 		""
 	),
-	Array(
+	array(
 		"Страны",
 		"/countries/",
-		Array(),
-		Array(),
+		array(),
+		array(),
 		""
 	)
 );
-?>

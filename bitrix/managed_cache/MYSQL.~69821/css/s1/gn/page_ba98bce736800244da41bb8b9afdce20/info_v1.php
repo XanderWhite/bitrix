@@ -1,1 +1,0 @@
-<?php $filesInfo = ["/local/components/dws/news.list/templates/.default/style.css" => "1747375419150",]; ?>
