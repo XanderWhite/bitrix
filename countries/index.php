@@ -1,14 +1,32 @@
 <?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Страны");
-?><h2><?=$APPLICATION->getTitle()?><?$APPLICATION->IncludeComponent(
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle("Страны:");
+?><section class="country-section container">
+ <?$APPLICATION->IncludeComponent(
 	"ns:country.list",
 	".default",
-	array(
-		"CACHE_TIME" => "3600",
-		"CACHE_TYPE" => "A",
+	Array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_ID" => "6"
+	)
+);?> <?$APPLICATION->IncludeComponent(
+	"ns:main.feedback",
+	".default",
+	array(
+		"COMPONENT_TEMPLATE" => ".default",
+		"EMAIL_TO" => "belov@techart.ru",
+		"EVENT_MESSAGE_ID" => array(
+			0 => "7",
+		),
+		"IBLOCK_ID" => "6",
+		"OK_TEXT" => "Спасибо, ваше сообщение принято.",
+		"REQUIRED_FIELDS" => array(
+			0 => "NAME",
+			1 => "EMAIL",
+			2 => "MESSAGE",
+			3 => "COUNTRY",
+		),
+		"USE_CAPTCHA" => "N"
 	),
 	false
-);?></h2><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?> </section><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

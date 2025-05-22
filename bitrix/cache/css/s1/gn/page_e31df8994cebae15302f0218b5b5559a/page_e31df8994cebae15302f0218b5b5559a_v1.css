@@ -1,0 +1,18 @@
+
+
+/* Start:/local/templates/gn/components/bitrix/main.feedback/mytemplate/style.css?1747900983294*/
+div.mfeedback {}
+div.mf-name, div.mf-email, div.mf-captcha, div.mf-message {width:80%; padding-bottom:0.4em;}
+div.mf-name input, div.mf-email input {width:60%;}
+div.mf-message textarea {width: 60%;}
+span.mf-req {color:yellow;}
+div.mf-ok-text {color:red; font-weight:bold; padding-bottom: 1em;}
+
+/* End */
+
+
+/* Start:/bitrix/components/bitrix/system.show_message/templates/.default/style.min.css?174720392851*/
+font.errortext{color:red}font.notetext{color:green}
+/* End */
+/* /local/templates/gn/components/bitrix/main.feedback/mytemplate/style.css?1747900983294 */
+/* /bitrix/components/bitrix/system.show_message/templates/.default/style.min.css?174720392851 */

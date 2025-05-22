@@ -6,6 +6,5 @@ $arComponentDescription = [
     "DESCRIPTION" => "Countries",
     "PATH" => [
         "ID" => "Список стран",
-    ],
-    "CACHE_PATH" => "Y"
+    ]
 ];

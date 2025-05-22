@@ -548,3 +548,78 @@ animation: zoom .3s infinite alternate linear;
 .left-menu{
 	display: flex;
 }
+
+
+/* Countries */
+.country-section{
+	margin-bottom: 50px;
+	margin-top: 50px;
+	display: flex;
+	gap: 100px;
+	justify-content: center;
+}
+
+.country{
+	display: flex;
+	flex-direction: column;
+}
+
+.country__title{
+	font-size: 36px;
+	margin-bottom: 20px;}
+
+
+	.country-list{
+display: flex;
+list-style: none;
+flex-direction: column;
+gap: 10px;
+font-size: 18px;
+margin-bottom: 50px;
+	}
+
+
+	div.mfeedback {
+
+max-width: 400px;
+align-self: center;
+}
+
+.mfeedback__form{
+    width: 100%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.mfeedback__form input,
+.mfeedback__form select,
+.mfeedback__form textarea
+{
+    width: 100% !important;
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.mf-country{
+	display: flex;
+	gap: 2px;
+}
+
+.mfeedback__form__btn-submit{
+	align-self: center;
+	background-color: rgb(217, 249, 240);
+	padding: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+div.mf-name input, div.mf-email input {width:60%;}
+div.mf-message textarea {width: 60%;}
+span.mf-req {
+	color:red;
+}
+div.mf-ok-text {
+	color:green; font-weight:bold; padding-bottom: 1em;
+}
+

@@ -1,30 +1,16 @@
 <?php
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-/** @var array $arParams */
-/** @var array $arResult */
-/** @global CMain $APPLICATION */
-/** @global CUser $USER */
-/** @global CDatabase $DB */
-/** @var CBitrixComponentTemplate $this */
-/** @var string $templateName */
-/** @var string $templateFile */
-/** @var string $templateFolder */
-/** @var string $componentPath */
-/** @var CBitrixComponent $component */
-
-$this->setFrameMode(true);
-
-if (empty($this->arResult['COUNTRIES'])) {
+if (empty($arResult['COUNTRIES'])) {
     ShowError('Страны не найдены');
+    return;
 }
 ?>
-
-<div class="countries-list">
-    ввввввв
-    <ul>
+<div class="country">
+    <h2 class="country__title"><?= $APPLICATION->showTitle(); ?></h2>
+    <ul class="country-list">
         <?php foreach ($arResult['COUNTRIES'] as $country): ?>
-            <li> <?= $country['NAME'] ?> </li>
-        <?php endforeach; ?>
-    </ul>
-</div>
+            <li class="country-item"> <?= $country['NAME'] ?> </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
