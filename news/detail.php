@@ -50,7 +50,6 @@ $APPLICATION->SetPageProperty("title", "мои новости с других п
 					"PAGER_SHOW_ALL" => "N",
 					"PAGER_TEMPLATE" => ".default",
 					"PAGER_TITLE" => "Страница",
-					"PROPERTY_CODE" => array("", ""),
 					"SET_BROWSER_TITLE" => "Y",
 					"SET_CANONICAL_URL" => "N",
 					"SET_LAST_MODIFIED" => "N",
@@ -64,6 +63,6 @@ $APPLICATION->SetPageProperty("title", "мои новости с других п
 					"STRICT_SECTION_CHECK" => "N",
 					"USE_PERMISSIONS" => "N",
 					"USE_SHARE" => "N",
-					"PROPERTY_CODE" => ["THEMES"]
+					"PROPERTY_CODE" => ["THEMES", "RESTRICTED_ACCESS"]
 				)
 			); ?><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

@@ -26,5 +26,19 @@ if (!empty($arResult['PROPERTIES']['THEMES']['VALUE'])) {
     }
 
     $arResult["THEMES"] = $themes;
+}
 
+global $USER;
+
+if (
+    !($USER->IsAuthorized() && (in_array(1, $USER->GetUserGroupArray()) || in_array(6, $USER->GetUserGroupArray())))
+    && $arResult["PROPERTIES"]["RESTRICTED_ACCESS"]["VALUE"] === 'да'
+) {
+    \Bitrix\Iblock\Component\Tools::process404(
+        "",
+        true,
+        true,
+        true,
+        false
+    );
 }

@@ -1,13 +1,48 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
+
+global $arAccessFilter;
+global $USER;
+
+if ($USER->IsAuthorized() && (in_array(1, $USER->GetUserGroupArray()) || in_array(6, $USER->GetUserGroupArray()))) {
+	$arAccessFilter = [];
+} else {
+	$arAccessFilter = array("PROPERTY_RESTRICTED_ACCESS_VALUE" => false);
+}
+
+$themeCode = $_GET['theme_code'];
+if ($themeCode) {
+	$res = CIBlockElement::GetList(
+		array(),
+		array(
+			"IBLOCK_ID" => 5,
+			"CODE" => $themeCode,
+			"ACTIVE" => "Y"
+		),
+		false,
+		false,
+		array("ID", "NAME")
+	);
+}
+
+if (!empty($res) && $theme = $res->GetNext()) {
+	$APPLICATION->SetTitle("Новости по теме: " . $theme['NAME']);
+	$GLOBALS['themeFilter'] = ["PROPERTY_THEMES" => $theme['ID']];
+}
+
+$GLOBALS['combinedFilter'] = array(
+	'LOGIC' => 'AND',
+	$GLOBALS['arAccessFilter'],
+	$GLOBALS['themeFilter']
+);
+
 ?>
-
-
 <? $APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"latest_news",
 	array(
+		"PROPERTY_CODE" => ["RESTRICTED_ACCESS"],
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -28,7 +63,6 @@ $APPLICATION->SetTitle("Новости");
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FIELD_CODE" => array("", ""),
-		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "1",
 		"IBLOCK_TYPE" => "news",
@@ -46,7 +80,6 @@ $APPLICATION->SetTitle("Новости");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array("", ""),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "Y",
@@ -58,34 +91,16 @@ $APPLICATION->SetTitle("Новости");
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N"
+		"STRICT_SECTION_CHECK" => "N",
+		"NEWS_COUNT" => "1",
+		"FILTER_NAME" => "combinedFilter",
 	)
 ); ?><?
-		$themeCode = $_GET['theme_code'];
-		if ($themeCode) {
-			$res = CIBlockElement::GetList(
-				array(),
-				array(
-					"IBLOCK_ID" => 5,
-					"CODE" => $themeCode,
-					"ACTIVE" => "Y"
-				),
-				false,
-				false,
-				array("ID", "NAME")
-			);
-		}
-
-
-		if (!empty($res) && $theme = $res->GetNext()) {
-			$APPLICATION->SetTitle("Новости по теме: " . $theme['NAME']);
-			$GLOBALS['themeFilter'] = ["PROPERTY_THEMES" => $theme['ID']];
-		}
-
 		$APPLICATION->IncludeComponent(
 			"bitrix:news.list",
 			"news_list",
 			array(
+				"FILTER_NAME" => "combinedFilter",
 				"ACTIVE_DATE_FORMAT" => "d.m.Y",
 				"ADD_SECTIONS_CHAIN" => "Y",
 				"AJAX_MODE" => "N",
@@ -109,7 +124,6 @@ $APPLICATION->SetTitle("Новости");
 					0 => "",
 					1 => "",
 				),
-				"FILTER_NAME" => "themeFilter",
 				"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 				"IBLOCK_ID" => "1",
 				"IBLOCK_TYPE" => "news",
@@ -127,11 +141,7 @@ $APPLICATION->SetTitle("Новости");
 				"PARENT_SECTION" => "",
 				"PARENT_SECTION_CODE" => "",
 				"PREVIEW_TRUNCATE_LEN" => "",
-				"PROPERTY_CODE" => array(
-					0 => "",
-					1 => "THEMES",
-					2 => "",
-				),
+				"PROPERTY_CODE" => array("RESTRICTED_ACCESS", "THEMES"),
 				"SEARCH_PAGE" => "/search/",
 				"SET_BROWSER_TITLE" => "Y",
 				"SET_LAST_MODIFIED" => "N",

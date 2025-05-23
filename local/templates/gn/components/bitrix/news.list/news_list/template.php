@@ -1,7 +1,7 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <section class="news-section container">
-    <h2 class="news-section__title"><?=$APPLICATION->showTitle();?></h2>
+    <h2 class="news-section__title"><?= $APPLICATION->showTitle(); ?></h2>
     <div class="news-list">
         <? foreach ($arResult["ITEMS"] as $arItem): ?>
             <article class="news-item">
