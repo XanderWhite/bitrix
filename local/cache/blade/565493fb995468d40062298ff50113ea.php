@@ -1,0 +1,1 @@
+ <h2 class="<?php echo e($block->mod($mods ?? [])); ?>"><?php echo e($title); ?></h2><?php /**PATH /var/www/workspace/bitrix/www/local/templates/gn/frontend/src/block/news/news-list-title/news-list-title.blade.php ENDPATH**/ ?>

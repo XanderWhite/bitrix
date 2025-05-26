@@ -1,0 +1,19 @@
+@use "style" as *;
+
+$block-name: "b-header";
+
+.#{$block-name} {
+	padding-top: clamp(1.25rem, 0.971rem + 1.27vw, 2.5rem);
+	padding-bottom: clamp(1.25rem, 0.971rem + 1.27vw, 2.5rem);
+	border-bottom: 1px rgb(108 110 123) solid;
+
+	&__inner {
+		display: flex;
+		gap: 50px;
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+	}
+}

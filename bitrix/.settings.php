@@ -1,27 +1,28 @@
 <?php
-return array (
-  'cache_flags' => 
+
+return array (
+  'cache_flags' =>
   array (
-    'value' => 
+    'value' =>
     array (
       'config_options' => 3600.0,
     ),
     'readonly' => false,
   ),
-  'cookies' => 
+  'cookies' =>
   array (
-    'value' => 
+    'value' =>
     array (
       'secure' => false,
       'http_only' => true,
     ),
     'readonly' => false,
   ),
-  'exception_handling' => 
+  'exception_handling' =>
   array (
-    'value' => 
+    'value' =>
     array (
-      'debug' => false,
+      'debug' => true,
       'handled_errors_types' => 4437,
       'exception_errors_types' => 4437,
       'ignore_silence' => false,
@@ -31,11 +32,11 @@
     ),
     'readonly' => false,
   ),
-  'connections' => 
+  'connections' =>
   array (
-    'value' => 
+    'value' =>
     array (
-      'default' => 
+      'default' =>
       array (
         'host' => 'localhost',
         'database' => 'workspace__bitrix',
@@ -47,31 +48,31 @@
     ),
     'readonly' => true,
   ),
-  'crypto' => 
+  'crypto' =>
   array (
-    'value' => 
+    'value' =>
     array (
       'crypto_key' => '782e5d9f19f5e17cfcf4b5a12f9ff0af',
     ),
     'readonly' => true,
   ),
-  'messenger' => 
+  'messenger' =>
   array (
-    'value' => 
+    'value' =>
     array (
       'run_mode' => NULL,
-      'brokers' => 
+      'brokers' =>
       array (
-        'default' => 
+        'default' =>
         array (
           'type' => 'db',
-          'params' => 
+          'params' =>
           array (
             'table' => 'Bitrix\\Main\\Messenger\\Internals\\Storage\\Db\\Model\\MessengerMessageTable',
           ),
         ),
       ),
-      'queues' => 
+      'queues' =>
       array (
       ),
     ),

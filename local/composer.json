@@ -1,0 +1,5 @@
+{
+    "require": {
+        "techart/bitrix.tao": "^1.23"
+    }
+}

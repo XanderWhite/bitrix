@@ -1,2 +1,5 @@
 www/local/templates/gn/builds
-w--ww/bitrix/
+www/bitrix
+www/upload
+www/local/.config.php
+www/local/vendor

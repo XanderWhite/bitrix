@@ -6,7 +6,7 @@ const DirectoryNamedWebpackPlugin = require("directory-named-webpack-plugin");
 const AssetsPlugin = require("assets-webpack-plugin");
 const styleLintPlugin = require("stylelint-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
-const CircularDependencyPlugin = require("circular-dependency-plugin");
+// const CircularDependencyPlugin = require("circular-dependency-plugin");
 const BundleAnalyzerPlugin =
 	require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const utils = require("./webpack/utils");
@@ -195,11 +195,11 @@ var plugins = [
 
 	new webpack.ProvidePlugin(provideVariables),
 	new ESLintPlugin({}),
-	new CircularDependencyPlugin({
-		exclude: /node_modules/,
-		failOnError: false,
-		cwd: process.cwd(),
-	}),
+	// new CircularDependencyPlugin({
+	// 	exclude: /node_modules/,
+	// 	failOnError: false,
+	// 	cwd: process.cwd(),
+	// }),
 ];
 if (withVue) {
 	const { VueLoaderPlugin } = require("vue-loader");

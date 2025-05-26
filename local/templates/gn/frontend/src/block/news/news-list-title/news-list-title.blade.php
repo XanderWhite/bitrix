@@ -1,0 +1,1 @@
+ <h2 class="{{ $block->mod($mods ?? []) }}">{{ $title }}</h2>

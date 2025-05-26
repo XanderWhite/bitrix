@@ -1,6 +1,6 @@
-
-<footer class="footer container">
-    <? $APPLICATION->IncludeComponent(
+<?
+ob_start();
+$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	".default",
 	array(
@@ -11,8 +11,18 @@
 		"COMPONENT_TEMPLATE" => ".default"
 	),
 	false
+);
+
+$footer = ob_get_clean();
+
+echo \TAO::frontend()->renderBlock(
+	'common/footer',
+	[
+		'footer' => $footer,
+		'class' => 'container'
+	]
 ); ?>
-</footer>
+
 </div>
 </body>
 

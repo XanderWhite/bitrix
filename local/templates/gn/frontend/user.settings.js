@@ -29,5 +29,5 @@ module.exports = {
 	output: {},
 	cssProcessing: [],
 	useBundleAnalyzer: true,
-	useTimestampInDevMode: false,
+	useTimestampInDevMode: true,
 };
