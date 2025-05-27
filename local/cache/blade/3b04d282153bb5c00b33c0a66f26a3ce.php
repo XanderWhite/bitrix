@@ -1,0 +1,1 @@
+<span class="<?php echo e($block->mod($mods ?? [])); ?>"><?php echo $date; ?></span><?php /**PATH /var/www/workspace/bitrix/www/local/templates/gn/frontend/src/block/common/date/date.blade.php ENDPATH**/ ?>

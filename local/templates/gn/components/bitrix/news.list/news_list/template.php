@@ -3,12 +3,12 @@
 <section class="news-section container">
     <?
     echo \TAO::frontend()->renderBlock(
-        'news/news-list-title',
+        'common/title',
         [
             'title' => $APPLICATION->getTitle(),
         ]
     );
-
+    
     echo \TAO::frontend()->renderBlock(
         'news/news-list',
         [

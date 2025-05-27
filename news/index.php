@@ -37,8 +37,9 @@ $GLOBALS['combinedFilter'] = array(
 	$GLOBALS['themeFilter']
 );
 
-?>
-<? $APPLICATION->IncludeComponent(
+ob_start();
+
+$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"latest_news",
 	array(
@@ -95,10 +96,13 @@ $GLOBALS['combinedFilter'] = array(
 		"NEWS_COUNT" => "1",
 		"FILTER_NAME" => "combinedFilter",
 	)
-); ?><?
-		$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"news_list", 
+);
+$lastnews = ob_get_clean();
+
+ob_start();
+$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"news_list",
 	array(
 		"FILTER_NAME" => "combinedFilter",
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
@@ -168,4 +172,15 @@ $GLOBALS['combinedFilter'] = array(
 		"FILE_404" => ""
 	),
 	false
-); ?>&nbsp;<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+);
+$news = ob_get_clean();
+
+echo \TAO::frontend()->renderBlock(
+	'news/news-main',
+	[
+		'lastnews' => $lastnews,
+		'news' => $news
+	]
+);
+
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");

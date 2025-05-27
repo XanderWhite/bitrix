@@ -3,12 +3,13 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Страны:");
 ?><section class="country-section container">
  <?$APPLICATION->IncludeComponent(
-	"ns:country.list",
-	".default",
-	Array(
+	"ns:country.list", 
+	".default", 
+	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_ID" => "6"
-	)
+	),
+	false
 );?> <?$APPLICATION->IncludeComponent(
 	"ns:main.feedback",
 	".default",

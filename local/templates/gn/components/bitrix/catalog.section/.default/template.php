@@ -304,7 +304,7 @@ if (!isset($arParams['HIDE_SECTION_DESCRIPTION']) || $arParams['HIDE_SECTION_DES
 												<?
 												$APPLICATION->IncludeComponent(
 													'bitrix:catalog.item',
-													'',
+													'sdds',
 													array(
 														'RESULT' => array(
 															'ITEM' => $item,

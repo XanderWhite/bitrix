@@ -9,7 +9,7 @@ if (empty($arResult['COUNTRIES'])) {
 echo \TAO::frontend()->renderBlock(
 	'common/country-list',
 	[
-		'title' => $APPLICATION->showTitle(),
+		'title' => $APPLICATION->getTitle(),
         'countries'=>$arResult['COUNTRIES']
 	]
 ); ?>

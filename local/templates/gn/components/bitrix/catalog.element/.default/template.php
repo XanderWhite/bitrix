@@ -18,6 +18,7 @@ use Bitrix\Catalog\ProductTable;
 $this->setFrameMode(true);
 $this->addExternalCss('/bitrix/css/main/bootstrap.css');
 
+echo 'dccdlc;d;';
 $templateLibrary = array('popup', 'fx', 'ui.fonts.opensans');
 $currencyList = '';
 

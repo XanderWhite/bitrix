@@ -8,16 +8,6 @@ $block-name: "b-news-list-elem";
 	flex-direction: column;
 	gap: 30px;
 
-	&__date {
-		align-self: flex-start;
-		padding: 6px 18px;
-		border-radius: 20px;
-		background-color: rgb(236 242 245);
-		color: rgb(108 110 123);
-		font-size: 16px;
-		line-height: 22px;
-	}
-
 	&__title {
 		font-family: OpenSans-SemiBold;
 		font-size: 32px;
@@ -32,52 +22,8 @@ $block-name: "b-news-list-elem";
 
 	&__text {
 		flex-grow: 1;
-		font-size: clamp(1.375rem, 1.236rem + 0.64vw, 2rem);
+		font-size: 20px;
 		line-height: 1.6em;
-	}
-
-	&__link {
-		align-self: flex-start;
-		padding: 16px 40px;
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		border: 2px solid rgb(155 64 122);
-		border-radius: 50px;
-		transition: 0.3s;
-
-		&:hover,
-		&:focus {
-			background: rgb(132 24 68);
-		}
-	}
-
-	&__link:hover &__link-text,
-	&__link:focus &__link-text {
-		color: #fff;
-	}
-
-	&__link:hover &__link-svg,
-	&__link:focus &__link-svg {
-		fill: #fff;
-		animation: move_right 0.4s alternate infinite linear;
-	}
-
-	&__link-text {
-		color: rgb(132 24 68);
-		font-family: OpenSans-SemiBold;
-		font-size: 16px;
-		font-weight: 600;
-		line-height: 22px;
-		text-transform: uppercase;
-		transition: 0.3s;
-	}
-
-	&__link-svg {
-		width: 25px;
-		height: 13.5px;
-		fill: rgb(132 24 68);
-		transition: 0.3s;
 	}
 
 	&:hover &__title,

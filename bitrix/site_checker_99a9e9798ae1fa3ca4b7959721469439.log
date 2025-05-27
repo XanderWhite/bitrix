@@ -1,20 +1,20 @@
-2025-May-26 09:45:56 Наличие необходимых модулей php (check_php_modules): Ok
+2025-May-27 09:47:00 Наличие необходимых модулей php (check_php_modules): Ok
 Все необходимые модули установлены
-2025-May-26 09:45:56 Обязательные параметры PHP (check_php_settings): Ok
+2025-May-27 09:47:00 Обязательные параметры PHP (check_php_settings): Ok
 Настройки правильные
-2025-May-26 09:45:56 Модули веб-сервера (check_security): Ok
+2025-May-27 09:47:00 Модули веб-сервера (check_security): Ok
 Конфликтов не выявлено
-2025-May-26 09:45:56 Значения переменных сервера (check_server_vars): Ok
+2025-May-27 09:47:00 Значения переменных сервера (check_server_vars): Ok
 Корректные
-2025-May-26 09:45:56 Сохранение сессии (check_session): Ok
+2025-May-27 09:47:00 Сохранение сессии (check_session): Ok
 50% done
-2025-May-26 09:45:56 Параметры настройки UTF (mbstring и константа BX_UTF) (check_mbstring): Ok
+2025-May-27 09:47:00 Параметры настройки UTF (mbstring и константа BX_UTF) (check_mbstring): Ok
 Правильные. Сайт работает в UTF кодировке
-2025-May-26 09:45:56 Служебные скрипты в корне сайта (check_install_scripts): Ok
+2025-May-27 09:47:00 Служебные скрипты в корне сайта (check_install_scripts): Ok
 Отсутствуют
-2025-May-26 09:45:56 Работа с сокетами (check_socket): Ok
+2025-May-27 09:47:00 Работа с сокетами (check_socket): Ok
 Connection to bitrix.belov:80	Success
 
 Успешно
-2025-May-26 09:45:56 Выполнение агентов на cron (check_bx_crontab): Warning
+2025-May-27 09:47:00 Выполнение агентов на cron (check_bx_crontab): Warning
 Замечание. Агенты выполняются на хитах, рекомендуется перевести выполнение агентов на cron

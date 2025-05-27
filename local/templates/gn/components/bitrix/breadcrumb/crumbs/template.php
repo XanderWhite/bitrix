@@ -51,4 +51,9 @@ for($index = 0; $index < $itemSize; $index++)
 
 $strReturn .= '<div style="clear:both"></div></div>';
 
-return $strReturn;
+return \TAO::frontend()->renderBlock(
+	'common/crumbs',
+	[
+		'crumbs' => $strReturn,
+	]
+);

@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001747920446';
-$dateexpire = '001783920446';
+$datecreate = '001748355170';
+$dateexpire = '001784355170';
 $ser_content = 'a:2:{s:7:"CONTENT";s:131:"<div class="bx_sitemap"><h1
 			class="bx_sitemap_title"
 			id="bx_1847241719_16"><a href="/tours/?SECTION_ID=16">123</a></h1></div>";s:4:"VARS";a:2:{s:8:"arResult";a:2:{s:14:"SECTIONS_COUNT";i:0;s:7:"SECTION";a:65:{s:2:"ID";s:2:"16";s:3:"~ID";s:2:"16";s:11:"TIMESTAMP_X";s:19:"21.05.2025 11:47:12";s:12:"~TIMESTAMP_X";s:19:"21.05.2025 11:47:12";s:11:"MODIFIED_BY";s:1:"1";s:12:"~MODIFIED_BY";s:1:"1";s:11:"DATE_CREATE";s:19:"21.05.2025 11:47:12";s:12:"~DATE_CREATE";s:19:"21.05.2025 11:47:12";s:10:"CREATED_BY";s:1:"1";s:11:"~CREATED_BY";s:1:"1";s:9:"IBLOCK_ID";s:1:"8";s:10:"~IBLOCK_ID";s:1:"8";s:17:"IBLOCK_SECTION_ID";N;s:18:"~IBLOCK_SECTION_ID";N;s:6:"ACTIVE";s:1:"Y";s:7:"~ACTIVE";s:1:"Y";s:13:"GLOBAL_ACTIVE";s:1:"Y";s:14:"~GLOBAL_ACTIVE";s:1:"Y";s:4:"SORT";s:3:"500";s:5:"~SORT";s:3:"500";s:4:"NAME";s:3:"123";s:5:"~NAME";s:3:"123";s:7:"PICTURE";N;s:8:"~PICTURE";N;s:11:"LEFT_MARGIN";s:1:"1";s:12:"~LEFT_MARGIN";s:1:"1";s:12:"RIGHT_MARGIN";s:1:"2";s:13:"~RIGHT_MARGIN";s:1:"2";s:11:"DEPTH_LEVEL";s:1:"1";s:12:"~DEPTH_LEVEL";s:1:"1";s:11:"DESCRIPTION";s:0:"";s:12:"~DESCRIPTION";s:0:"";s:16:"DESCRIPTION_TYPE";s:4:"text";s:17:"~DESCRIPTION_TYPE";s:4:"text";s:18:"SEARCHABLE_CONTENT";s:5:"123

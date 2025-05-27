@@ -42,3 +42,12 @@ if (
         false
     );
 }
+
+$arResult['CONTENT'] = [
+    'date' =>  $arResult["DISPLAY_ACTIVE_FROM"],
+    'title' =>  $arResult["PREVIEW_TEXT"],
+    'text' => $arResult["DETAIL_TEXT"],
+    'themes' => $arResult['THEMES'],
+    'picSrc' => $arResult["DETAIL_PICTURE"]["SRC"],
+    'picAlt' => $arResult["DETAIL_PICTURE"]["ALT"]
+];
