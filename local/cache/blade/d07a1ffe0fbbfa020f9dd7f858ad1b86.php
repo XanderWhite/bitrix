@@ -1,1 +1,1 @@
-<?php /**PATH /var/www/workspace/bitrix/www/local/templates/gn/frontend/src/block/common/crumbs/crumbs.blade.php ENDPATH**/ ?>
+    <?php echo $crumbs; ?><?php /**PATH /var/www/workspace/bitrix/www/local/templates/gn/frontend/src/block/common/crumbs/crumbs.blade.php ENDPATH**/ ?>

@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001748004208';
-$dateexpire = '001748040208';
+$datecreate = '001748424578';
+$dateexpire = '001748460578';
 $ser_content = 'a:2:{s:7:"CONTENT";s:349:"	<h4>Наличие на складах</h4>
 <div class="bx_storege" id="catalog_store_amount_div">
 		<hr><ul id="c_store_amount">

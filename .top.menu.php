@@ -1,45 +1,53 @@
 <?
-$aMenuLinks = array(
-	array(
-		"О нас",
-		"/about/",
-		array(),
-		array(),
-		""
+$aMenuLinks = Array(
+	Array(
+		"О нас", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
 	),
-	array(
-		"Новости",
-		"/news/",
-		array(),
-		array(),
-		""
+	Array(
+		"Новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
 	),
-	array(
-		"Туры",
-		"/tours/?SECTION_ID=16",
-		array(),
-		array(),
-		""
+	Array(
+		"Туры", 
+		"/tours/?SECTION_ID=16", 
+		Array(), 
+		Array(), 
+		"" 
 	),
-	array(
-		"Компания",
-		"/company/",
-		array(),
-		array(),
-		""
+	Array(
+		"Компания", 
+		"/company/", 
+		Array(), 
+		Array(), 
+		"" 
 	),
-	array(
-		"Контакты",
-		"/contacts/",
-		array(),
-		array(),
-		""
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
 	),
-	array(
-		"Страны",
-		"/countries/",
-		array(),
-		array(),
-		""
+	Array(
+		"Страны", 
+		"/countries/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"basket", 
+		"/basket.php", 
+		Array(), 
+		Array(), 
+		"" 
 	)
 );
+?>

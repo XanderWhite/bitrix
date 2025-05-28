@@ -1,8 +1,8 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001748349457';
-$dateexpire = '001784349457';
-$ser_content = 'a:2:{s:7:"CONTENT";s:24168:"<div class="bx-catalog-element bx-red" id="bx_117848907_62"
+$datecreate = '001748417085';
+$dateexpire = '001784417085';
+$ser_content = 'a:2:{s:7:"CONTENT";s:24177:"dccdlc;d;<div class="bx-catalog-element bx-red" id="bx_117848907_62"
 	itemscope itemtype="http://schema.org/Product">
 	<div class="container-fluid">
 					<div class="row">
@@ -124,7 +124,7 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:24168:"<div class="bx-catalog-element bx-re
 	<div class="row">
 		<div class="col-xs-12">
 			<!--\'start_frame_cache_OhECjo\'-->
-	<span id="sale_gift_product_1831695642" class="sale_prediction_product_detail_container"></span>
+	<span id="sale_gift_product_1276316020" class="sale_prediction_product_detail_container"></span>
 
 	<script>
 		BX.ready(function(){
@@ -136,7 +136,7 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:24168:"<div class="bx-catalog-element bx-re
 			};
 
 			bx_sale_prediction_product_detail_load(
-				\'sale_gift_product_1831695642\',
+				\'sale_gift_product_1276316020\',
 				giftAjaxData
 			);
 
@@ -205,7 +205,7 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:24168:"<div class="bx-catalog-element bx-re
 							<div data-entity="parent-container">
 											<div class="catalog-block-header" data-entity="header" data-showed="false" style="display: none; opacity: 0;">
 							Выберите один из товаров, чтобы получить подарок						</div>
-					<!--\'start_frame_cache_KSBlai\'--><div id="sale_gift_main_products_525268614" class="bx_sale_gift_main_products bx_red">
+					<!--\'start_frame_cache_KSBlai\'--><div id="sale_gift_main_products_161471618" class="bx_sale_gift_main_products bx_red">
 </div>
 <script>
 BX(function () {
@@ -215,7 +215,7 @@ BX(function () {
 			template: \'.default.dd22948c57df5d8cd9264db684beaeeede5528e46b4e4cf625f68c9fa434231c\',
 			site_id: \'s1\',
 		},
-		injectId:  \'sale_gift_main_products_525268614\',
+		injectId:  \'sale_gift_main_products_161471618\',
 		mainProductState:  \'YToyOntpOjA7YTowOnt9aToxO2E6MDp7fX0=.71e796c955baa7204749704332964f47f5529b2d6422a528717bfa3bb1775cad\',
 		isGift:  false,
 		productId:  62,

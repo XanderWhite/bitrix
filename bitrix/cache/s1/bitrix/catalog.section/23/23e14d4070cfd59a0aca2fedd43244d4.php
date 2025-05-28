@@ -1,8 +1,8 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001748350854';
-$dateexpire = '001784350854';
-$ser_content = 'a:2:{s:7:"CONTENT";s:22233:"	<div class="bx-section-desc bx-red">
+$datecreate = '001748411285';
+$dateexpire = '001784411285';
+$ser_content = 'a:2:{s:7:"CONTENT";s:24145:"	<div class="bx-section-desc bx-red">
 		<p class="bx-section-desc-post"></p>
 	</div>
 	
@@ -17,57 +17,101 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:22233:"	<div class="bx-section-desc bx-red"
 												
 	<div class="product-item-container"
 		id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206" data-entity="item">
-		
+		bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206
 <div class="product-item">
-		<a class="product-item-image-wrapper" href="/tours/?SECTION_ID=16&amp;ELEMENT_ID=59" title="Конный Китай"
+
+	<!-- Блок изображений товара
+
+Отображает основное и дополнительные фото (слайдер).
+
+Показывает процент скидки (если есть).
+
+Выводит метки товара (например, "Хит", "Акция", "Новинка").
+-->
+			<a class="product-item-image-wrapper" href="/tours/?SECTION_ID=16&amp;ELEMENT_ID=59" title="Конный Китай"
 			data-entity="image-wrapper">
+		
+			<!-- Слайдер изображений -->
 			<span class="product-item-image-slider-slide-container slide" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_pict_slider"
-			style="display: none;"			data-slider-interval="3000" data-slider-wrap="true">
-					</span>
-		<span class="product-item-image-original" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_pict"
-			style="background-image: url(\'/upload/iblock/523/7gye01zy7aupeb5pmog4hfy2fxnhve8o.jpg\'); ">
-		</span>
-					<span class="product-item-image-alternative" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_secondpict"
-				style="background-image: url(\'/upload/iblock/523/7gye01zy7aupeb5pmog4hfy2fxnhve8o.jpg\'); ">
-			</span>
-						<div class="product-item-label-ring product-item-label-small product-item-label-bottom product-item-label-right" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_dsc_perc"
-				style="display: none;">
-				<span>0%</span>
-			</div>
-					<div class="product-item-image-slider-control-container" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_pict_slider_indicator"
-			style="display: none;">
-					</div>
-				</a>
-		<div class="product-item-title">
-				<a href="/tours/?SECTION_ID=16&amp;ELEMENT_ID=59" title="Конный Китай">
-				Конный Китай				</a>
-			</div>
+				style="display: none;"				data-slider-interval="3000" data-slider-wrap="true">
+							</span>
+
+			<!-- Основное изображение -->
+			<span class="product-item-image-original" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_pict" style="background-image: url(\'/upload/iblock/523/7gye01zy7aupeb5pmog4hfy2fxnhve8o.jpg\'); "></span>
+
+
+			<!-- Второе изображение (при наведении) -->
+							<span class="product-item-image-alternative" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_secondpict" style="background-image: url(\'/upload/iblock/523/7gye01zy7aupeb5pmog4hfy2fxnhve8o.jpg\'); "></span>
+							<div class="product-item-label-ring product-item-label-small product-item-label-bottom product-item-label-right" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_dsc_perc"
+					style="display: none;">
+					<span>0%</span>
+				</div>
+			
+
+								</a>
+	
+
+
+
+
+
+	<!-- 3. Название товара
+
+Что делает:
+
+Выводит название товара.
+
+Если задан $itemHasDetailUrl, делает его ссылкой на детальную страницу.
+
+-->
+
+
+
+	<h3 class="product-item-title">
+					<a href="/tours/?SECTION_ID=16&amp;ELEMENT_ID=59" title="Конный Китай">
+						Конный Китай						</a>
+			</h3>
+
+
+
+	<!-- 4. Блок цены
+
+Что делает:
+
+Показывает текущую цену.
+
+Если есть старая цена, отображает её зачёркнутой (для демонстрации скидки).
+
+
+-->
+
+
 						<div class="product-item-info-container product-item-price-container" data-entity="price-block">
 													<span class="product-item-price-old" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_price_old"
 								style="display: none;">
 								1&nbsp;000 &#8381;							</span>&nbsp;
-													<span class="product-item-price-current" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_price">
+												<span class="product-item-price-current" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_price">
 							1&nbsp;000 &#8381;						</span>
 					</div>
 												<div class="product-item-info-container product-item-hidden" data-entity="props-block">
 								<dl class="product-item-properties">
-																			<dt class="hidden-xs">
+																			<dt class="text-muted d-none d-sm-block">
 											Страны										</dt>
-										<dd class="hidden-xs">
+										<dd class="text-dark d-none d-sm-block">
 											<a href="/trips/detail.php?ID=51">Китай</a>										</dd>
-																				<dt class="hidden-xs">
+																			<dt class="text-muted d-none d-sm-block">
 											Тематика путешествий										</dt>
-										<dd class="hidden-xs">
+										<dd class="text-dark d-none d-sm-block">
 											<a href="/trips/detail.php?ID=55">история</a>										</dd>
-																		</dl>
+																	</dl>
 							</div>
-												<div class="product-item-info-container product-item-hidden" data-entity="buttons-block">
+											<div class="product-item-info-container product-item-hidden" data-entity="buttons-block">
 														<div class="product-item-button-container" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_basket_actions">
-									<a class="btn btn-default btn-md" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_buy_link"
+									<button class="btn btn-primary btn-md" id="bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_buy_link"
 										href="javascript:void(0)" rel="nofollow">
-										В корзину									</a>
+										В корзину									</button>
 								</div>
-													</div>
+												</div>
 					</div>		<script>
 			var obbx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206 = new JCCatalogItem({\'PRODUCT_TYPE\':\'1\',\'SHOW_QUANTITY\':false,\'SHOW_ADD_BASKET_BTN\':false,\'SHOW_BUY_BTN\':true,\'SHOW_ABSENT\':true,\'SHOW_OLD_PRICE\':true,\'ADD_TO_BASKET_ACTION\':\'ADD\',\'SHOW_CLOSE_POPUP\':false,\'SHOW_DISCOUNT_PERCENT\':true,\'DISPLAY_COMPARE\':false,\'BIG_DATA\':false,\'TEMPLATE_THEME\':\'red\',\'VIEW_MODE\':\'CARD\',\'USE_SUBSCRIBE\':false,\'PRODUCT\':{\'ID\':\'59\',\'NAME\':\'Конный Китай\',\'DETAIL_PAGE_URL\':\'/tours/?SECTION_ID=16&amp;ELEMENT_ID=59\',\'PICT\':{\'ID\':\'79\',\'SRC\':\'/upload/iblock/523/7gye01zy7aupeb5pmog4hfy2fxnhve8o.jpg\',\'WIDTH\':\'1920\',\'HEIGHT\':\'1439\'},\'CAN_BUY\':true,\'CHECK_QUANTITY\':false,\'MAX_QUANTITY\':\'0\',\'STEP_QUANTITY\':\'1\',\'QUANTITY_FLOAT\':true,\'ITEM_PRICE_MODE\':\'S\',\'ITEM_PRICES\':[{\'UNROUND_BASE_PRICE\':\'1000\',\'UNROUND_PRICE\':\'1000\',\'BASE_PRICE\':\'1000\',\'PRICE\':\'1000\',\'ID\':\'8\',\'PRICE_TYPE_ID\':\'2\',\'CURRENCY\':\'RUB\',\'DISCOUNT\':\'0\',\'PERCENT\':\'0\',\'QUANTITY_FROM\':\'\',\'QUANTITY_TO\':\'\',\'QUANTITY_HASH\':\'ZERO-INF\',\'MEASURE_RATIO_ID\':\'\',\'PRINT_BASE_PRICE\':\'1&nbsp;000 &#8381;\',\'RATIO_BASE_PRICE\':\'1000\',\'PRINT_RATIO_BASE_PRICE\':\'1&nbsp;000 &#8381;\',\'PRINT_PRICE\':\'1&nbsp;000 &#8381;\',\'RATIO_PRICE\':\'1000\',\'PRINT_RATIO_PRICE\':\'1&nbsp;000 &#8381;\',\'PRINT_DISCOUNT\':\'0 &#8381;\',\'RATIO_DISCOUNT\':\'0\',\'PRINT_RATIO_DISCOUNT\':\'0 &#8381;\',\'MIN_QUANTITY\':\'1\'}],\'ITEM_PRICE_SELECTED\':\'0\',\'ITEM_QUANTITY_RANGES\':{\'ZERO-INF\':{\'HASH\':\'ZERO-INF\',\'QUANTITY_FROM\':\'\',\'QUANTITY_TO\':\'\',\'SORT_FROM\':\'0\',\'SORT_TO\':\'INF\'}},\'ITEM_QUANTITY_RANGE_SELECTED\':\'ZERO-INF\',\'ITEM_MEASURE_RATIOS\':{\'2\':{\'ID\':\'2\',\'RATIO\':\'1\',\'IS_DEFAULT\':\'Y\',\'PRODUCT_ID\':\'59\'}},\'ITEM_MEASURE_RATIO_SELECTED\':\'2\',\'MORE_PHOTO\':[{\'ID\':\'79\',\'SRC\':\'/upload/iblock/523/7gye01zy7aupeb5pmog4hfy2fxnhve8o.jpg\',\'WIDTH\':\'1920\',\'HEIGHT\':\'1439\'}],\'MORE_PHOTO_COUNT\':\'1\'},\'BASKET\':{\'ADD_PROPS\':true,\'QUANTITY\':\'quantity\',\'PROPS\':\'prop\',\'EMPTY_PROPS\':true,\'BASKET_URL\':\'/personal/basket.php\',\'ADD_URL_TEMPLATE\':\'/tours/?SECTION_ID=16&PAGEN_1=2&action=ADD2BASKET&id=#ID#\',\'BUY_URL_TEMPLATE\':\'/tours/?SECTION_ID=16&PAGEN_1=2&action=BUY&id=#ID#\'},\'VISUAL\':{\'ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206\',\'PICT_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_secondpict\',\'PICT_SLIDER_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_pict_slider\',\'QUANTITY_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_quantity\',\'QUANTITY_UP_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_quant_up\',\'QUANTITY_DOWN_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_quant_down\',\'PRICE_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_price\',\'PRICE_OLD_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_price_old\',\'PRICE_TOTAL_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_price_total\',\'BUY_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_buy_link\',\'BASKET_PROP_DIV\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_basket_prop\',\'BASKET_ACTIONS_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_basket_actions\',\'NOT_AVAILABLE_MESS\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_not_avail\',\'COMPARE_LINK_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_compare_link\',\'SUBSCRIBE_ID\':\'bx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206_subscribe\'},\'PRODUCT_DISPLAY_MODE\':\'N\',\'USE_ENHANCED_ECOMMERCE\':\'N\',\'DATA_LAYER_NAME\':\'\',\'BRAND_PROPERTY\':\'\',\'IS_FACEBOOK_CONVERSION_CUSTOMIZE_PRODUCT_EVENT_ENABLED\':false});
 		</script>
@@ -81,57 +125,101 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:22233:"	<div class="bx-section-desc bx-red"
 												
 	<div class="product-item-container"
 		id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755" data-entity="item">
-		
+		bx_3966226736_58_362ce596257894d11ab5c1d73d13c755
 <div class="product-item">
-		<a class="product-item-image-wrapper" href="/tours/?SECTION_ID=16&amp;ELEMENT_ID=58" title="По городам"
+
+	<!-- Блок изображений товара
+
+Отображает основное и дополнительные фото (слайдер).
+
+Показывает процент скидки (если есть).
+
+Выводит метки товара (например, "Хит", "Акция", "Новинка").
+-->
+			<a class="product-item-image-wrapper" href="/tours/?SECTION_ID=16&amp;ELEMENT_ID=58" title="По городам"
 			data-entity="image-wrapper">
+		
+			<!-- Слайдер изображений -->
 			<span class="product-item-image-slider-slide-container slide" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_pict_slider"
-			style="display: none;"			data-slider-interval="3000" data-slider-wrap="true">
-					</span>
-		<span class="product-item-image-original" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_pict"
-			style="background-image: url(\'/upload/iblock/4f3/yur260po913iwi6afz0rmrz3uqj7z777.png\'); ">
-		</span>
-					<span class="product-item-image-alternative" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_secondpict"
-				style="background-image: url(\'/upload/iblock/4f3/yur260po913iwi6afz0rmrz3uqj7z777.png\'); ">
-			</span>
-						<div class="product-item-label-ring product-item-label-small product-item-label-bottom product-item-label-right" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_dsc_perc"
-				>
-				<span>-20%</span>
-			</div>
-					<div class="product-item-image-slider-control-container" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_pict_slider_indicator"
-			style="display: none;">
-					</div>
-				</a>
-		<div class="product-item-title">
-				<a href="/tours/?SECTION_ID=16&amp;ELEMENT_ID=58" title="По городам">
-				По городам				</a>
-			</div>
+				style="display: none;"				data-slider-interval="3000" data-slider-wrap="true">
+							</span>
+
+			<!-- Основное изображение -->
+			<span class="product-item-image-original" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_pict" style="background-image: url(\'/upload/iblock/4f3/yur260po913iwi6afz0rmrz3uqj7z777.png\'); "></span>
+
+
+			<!-- Второе изображение (при наведении) -->
+							<span class="product-item-image-alternative" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_secondpict" style="background-image: url(\'/upload/iblock/4f3/yur260po913iwi6afz0rmrz3uqj7z777.png\'); "></span>
+							<div class="product-item-label-ring product-item-label-small product-item-label-bottom product-item-label-right" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_dsc_perc"
+					>
+					<span>-20%</span>
+				</div>
+			
+
+								</a>
+	
+
+
+
+
+
+	<!-- 3. Название товара
+
+Что делает:
+
+Выводит название товара.
+
+Если задан $itemHasDetailUrl, делает его ссылкой на детальную страницу.
+
+-->
+
+
+
+	<h3 class="product-item-title">
+					<a href="/tours/?SECTION_ID=16&amp;ELEMENT_ID=58" title="По городам">
+						По городам						</a>
+			</h3>
+
+
+
+	<!-- 4. Блок цены
+
+Что делает:
+
+Показывает текущую цену.
+
+Если есть старая цена, отображает её зачёркнутой (для демонстрации скидки).
+
+
+-->
+
+
 						<div class="product-item-info-container product-item-price-container" data-entity="price-block">
 													<span class="product-item-price-old" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_price_old"
 								>
 								1&nbsp;000 &#8381;							</span>&nbsp;
-													<span class="product-item-price-current" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_price">
+												<span class="product-item-price-current" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_price">
 							800 &#8381;						</span>
 					</div>
 												<div class="product-item-info-container product-item-hidden" data-entity="props-block">
 								<dl class="product-item-properties">
-																			<dt class="hidden-xs">
+																			<dt class="text-muted d-none d-sm-block">
 											Страны										</dt>
-										<dd class="hidden-xs">
+										<dd class="text-dark d-none d-sm-block">
 											<a href="/trips/detail.php?ID=51">Китай</a> / <a href="/trips/detail.php?ID=50">Россия</a> / <a href="/trips/detail.php?ID=52">США</a>										</dd>
-																				<dt class="hidden-xs">
+																			<dt class="text-muted d-none d-sm-block">
 											Тематика путешествий										</dt>
-										<dd class="hidden-xs">
+										<dd class="text-dark d-none d-sm-block">
 											<a href="/trips/detail.php?ID=56">города</a>										</dd>
-																		</dl>
+																	</dl>
 							</div>
-												<div class="product-item-info-container product-item-hidden" data-entity="buttons-block">
+											<div class="product-item-info-container product-item-hidden" data-entity="buttons-block">
 														<div class="product-item-button-container" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_basket_actions">
-									<a class="btn btn-default btn-md" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_buy_link"
+									<button class="btn btn-primary btn-md" id="bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_buy_link"
 										href="javascript:void(0)" rel="nofollow">
-										В корзину									</a>
+										В корзину									</button>
 								</div>
-													</div>
+												</div>
 					</div>		<script>
 			var obbx_3966226736_58_362ce596257894d11ab5c1d73d13c755 = new JCCatalogItem({\'PRODUCT_TYPE\':\'1\',\'SHOW_QUANTITY\':false,\'SHOW_ADD_BASKET_BTN\':false,\'SHOW_BUY_BTN\':true,\'SHOW_ABSENT\':true,\'SHOW_OLD_PRICE\':true,\'ADD_TO_BASKET_ACTION\':\'ADD\',\'SHOW_CLOSE_POPUP\':false,\'SHOW_DISCOUNT_PERCENT\':true,\'DISPLAY_COMPARE\':false,\'BIG_DATA\':false,\'TEMPLATE_THEME\':\'red\',\'VIEW_MODE\':\'CARD\',\'USE_SUBSCRIBE\':false,\'PRODUCT\':{\'ID\':\'58\',\'NAME\':\'По городам\',\'DETAIL_PAGE_URL\':\'/tours/?SECTION_ID=16&amp;ELEMENT_ID=58\',\'PICT\':{\'ID\':\'80\',\'SRC\':\'/upload/iblock/4f3/yur260po913iwi6afz0rmrz3uqj7z777.png\',\'WIDTH\':\'1080\',\'HEIGHT\':\'607\'},\'CAN_BUY\':true,\'CHECK_QUANTITY\':false,\'MAX_QUANTITY\':\'0\',\'STEP_QUANTITY\':\'1\',\'QUANTITY_FLOAT\':true,\'ITEM_PRICE_MODE\':\'S\',\'ITEM_PRICES\':[{\'UNROUND_BASE_PRICE\':\'1000\',\'UNROUND_PRICE\':\'800\',\'BASE_PRICE\':\'1000\',\'PRICE\':\'800\',\'ID\':\'9\',\'PRICE_TYPE_ID\':\'2\',\'CURRENCY\':\'RUB\',\'DISCOUNT\':\'200\',\'PERCENT\':\'20\',\'QUANTITY_FROM\':\'\',\'QUANTITY_TO\':\'\',\'QUANTITY_HASH\':\'ZERO-INF\',\'MEASURE_RATIO_ID\':\'\',\'PRINT_BASE_PRICE\':\'1&nbsp;000 &#8381;\',\'RATIO_BASE_PRICE\':\'1000\',\'PRINT_RATIO_BASE_PRICE\':\'1&nbsp;000 &#8381;\',\'PRINT_PRICE\':\'800 &#8381;\',\'RATIO_PRICE\':\'800\',\'PRINT_RATIO_PRICE\':\'800 &#8381;\',\'PRINT_DISCOUNT\':\'200 &#8381;\',\'RATIO_DISCOUNT\':\'200\',\'PRINT_RATIO_DISCOUNT\':\'200 &#8381;\',\'MIN_QUANTITY\':\'1\'}],\'ITEM_PRICE_SELECTED\':\'0\',\'ITEM_QUANTITY_RANGES\':{\'ZERO-INF\':{\'HASH\':\'ZERO-INF\',\'QUANTITY_FROM\':\'\',\'QUANTITY_TO\':\'\',\'SORT_FROM\':\'0\',\'SORT_TO\':\'INF\'}},\'ITEM_QUANTITY_RANGE_SELECTED\':\'ZERO-INF\',\'ITEM_MEASURE_RATIOS\':{\'1\':{\'ID\':\'1\',\'RATIO\':\'1\',\'IS_DEFAULT\':\'Y\',\'PRODUCT_ID\':\'58\'}},\'ITEM_MEASURE_RATIO_SELECTED\':\'1\',\'MORE_PHOTO\':[{\'ID\':\'80\',\'SRC\':\'/upload/iblock/4f3/yur260po913iwi6afz0rmrz3uqj7z777.png\',\'WIDTH\':\'1080\',\'HEIGHT\':\'607\'}],\'MORE_PHOTO_COUNT\':\'1\'},\'BASKET\':{\'ADD_PROPS\':true,\'QUANTITY\':\'quantity\',\'PROPS\':\'prop\',\'EMPTY_PROPS\':true,\'BASKET_URL\':\'/personal/basket.php\',\'ADD_URL_TEMPLATE\':\'/tours/?SECTION_ID=16&PAGEN_1=2&action=ADD2BASKET&id=#ID#\',\'BUY_URL_TEMPLATE\':\'/tours/?SECTION_ID=16&PAGEN_1=2&action=BUY&id=#ID#\'},\'VISUAL\':{\'ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755\',\'PICT_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_secondpict\',\'PICT_SLIDER_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_pict_slider\',\'QUANTITY_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_quantity\',\'QUANTITY_UP_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_quant_up\',\'QUANTITY_DOWN_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_quant_down\',\'PRICE_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_price\',\'PRICE_OLD_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_price_old\',\'PRICE_TOTAL_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_price_total\',\'BUY_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_buy_link\',\'BASKET_PROP_DIV\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_basket_prop\',\'BASKET_ACTIONS_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_basket_actions\',\'NOT_AVAILABLE_MESS\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_not_avail\',\'COMPARE_LINK_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_compare_link\',\'SUBSCRIBE_ID\':\'bx_3966226736_58_362ce596257894d11ab5c1d73d13c755_subscribe\'},\'PRODUCT_DISPLAY_MODE\':\'N\',\'USE_ENHANCED_ECOMMERCE\':\'N\',\'DATA_LAYER_NAME\':\'\',\'BRAND_PROPERTY\':\'\',\'IS_FACEBOOK_CONVERSION_CUSTOMIZE_PRODUCT_EVENT_ENABLED\':false});
 		</script>
@@ -219,6 +307,6 @@ $ser_content = 'a:2:{s:7:"CONTENT";s:22233:"	<div class="bx-section-desc bx-red"
 										<span class="pagination__link active">2</span>
 					
 	
-	</div>";s:4:"NAME";s:3:"123";s:17:"IBLOCK_SECTION_ID";N;s:16:"IPROPERTY_VALUES";a:0:{}s:16:"BACKGROUND_IMAGE";b:0;s:19:"USE_CATALOG_BUTTONS";a:1:{s:11:"add_product";b:1;}}s:18:"templateCachedData";a:11:{s:13:"additionalCSS";s:72:"/local/templates/gn/components/bitrix/catalog.section/.default/style.css";s:12:"additionalJS";s:72:"/local/templates/gn/components/bitrix/catalog.section/.default/script.js";s:9:"frameMode";b:1;s:11:"externalCss";a:1:{i:0;s:30:"/bitrix/css/main/bootstrap.css";}s:16:"component_epilog";a:5:{s:10:"epilogFile";s:83:"/local/templates/gn/components/bitrix/catalog.section/.default/component_epilog.php";s:12:"templateName";s:8:".default";s:12:"templateFile";s:75:"/local/templates/gn/components/bitrix/catalog.section/.default/template.php";s:14:"templateFolder";s:62:"/local/templates/gn/components/bitrix/catalog.section/.default";s:12:"templateData";a:4:{s:14:"TEMPLATE_THEME";s:3:"red";s:16:"TEMPLATE_LIBRARY";a:4:{i:0;s:5:"popup";i:1;s:4:"ajax";i:2;s:2:"fx";i:3;s:8:"currency";}s:10:"CURRENCIES";s:748:"[{\'CURRENCY\':\'BYN\',\'FORMAT\':{\'FORMAT_STRING\':\'# руб.\',\'DEC_POINT\':\'.\',\'THOUSANDS_SEP\':\'&nbsp;\',\'DECIMALS\':2,\'THOUSANDS_VARIANT\':\'B\',\'HIDE_ZERO\':\'Y\'}},{\'CURRENCY\':\'EUR\',\'FORMAT\':{\'FORMAT_STRING\':\'# &euro;\',\'DEC_POINT\':\'.\',\'THOUSANDS_SEP\':\'&nbsp;\',\'DECIMALS\':2,\'THOUSANDS_VARIANT\':\'B\',\'HIDE_ZERO\':\'Y\'}},{\'CURRENCY\':\'RUB\',\'FORMAT\':{\'FORMAT_STRING\':\'# &#8381;\',\'DEC_POINT\':\'.\',\'THOUSANDS_SEP\':\'&nbsp;\',\'DECIMALS\':2,\'THOUSANDS_VARIANT\':\'B\',\'HIDE_ZERO\':\'Y\'}},{\'CURRENCY\':\'UAH\',\'FORMAT\':{\'FORMAT_STRING\':\'# грн.\',\'DEC_POINT\':\'.\',\'THOUSANDS_SEP\':\'&nbsp;\',\'DECIMALS\':2,\'THOUSANDS_VARIANT\':\'B\',\'HIDE_ZERO\':\'Y\'}},{\'CURRENCY\':\'USD\',\'FORMAT\':{\'FORMAT_STRING\':\'$#\',\'DEC_POINT\':\'.\',\'THOUSANDS_SEP\':\',\',\'DECIMALS\':2,\'THOUSANDS_VARIANT\':\'C\',\'HIDE_ZERO\':\'Y\'}}]";s:24:"USE_PAGINATION_CONTAINER";b:1;}}s:8:"__NavNum";i:1;s:17:"__currentCounters";a:2:{s:19:"bitrix:catalog.item";i:2;s:28:"bitrix:system.pagenavigation";i:1;}s:14:"__children_css";a:3:{i:0;s:87:"/local/templates/gn/components/bitrix/system.pagenavigation/custom_pagination/style.css";i:1;s:67:"/bitrix/components/bitrix/catalog.item/templates/.default/style.css";i:2;s:67:"/bitrix/components/bitrix/catalog.item/templates/.default/style.css";}s:13:"__children_js";a:2:{i:0;s:67:"/bitrix/components/bitrix/catalog.item/templates/.default/script.js";i:1;s:67:"/bitrix/components/bitrix/catalog.item/templates/.default/script.js";}s:18:"__children_epilogs";a:2:{i:0;a:5:{s:10:"epilogFile";s:78:"/bitrix/components/bitrix/catalog.item/templates/.default/component_epilog.php";s:12:"templateName";s:8:".default";s:12:"templateFile";s:70:"/bitrix/components/bitrix/catalog.item/templates/.default/template.php";s:14:"templateFolder";s:57:"/bitrix/components/bitrix/catalog.item/templates/.default";s:12:"templateData";a:2:{s:6:"JS_OBJ";s:51:"obbx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206";s:4:"ITEM";a:2:{s:2:"ID";i:59;s:9:"IBLOCK_ID";i:8;}}}i:1;a:5:{s:10:"epilogFile";s:78:"/bitrix/components/bitrix/catalog.item/templates/.default/component_epilog.php";s:12:"templateName";s:8:".default";s:12:"templateFile";s:70:"/bitrix/components/bitrix/catalog.item/templates/.default/template.php";s:14:"templateFolder";s:57:"/bitrix/components/bitrix/catalog.item/templates/.default";s:12:"templateData";a:2:{s:6:"JS_OBJ";s:51:"obbx_3966226736_58_362ce596257894d11ab5c1d73d13c755";s:4:"ITEM";a:2:{s:2:"ID";i:58;s:9:"IBLOCK_ID";i:8;}}}}s:13:"__editButtons";a:4:{i:0;a:5:{i:0;s:13:"AddEditAction";i:1;s:35:"59_7e1b8e3524755c391129a9d7e6f2d206";i:2;s:235:"/bitrix/admin/cat_product_edit.php?IBLOCK_ID=8&type=trips&ID=59&lang=ru&force_catalog=1&filter_section=16&bxpublic=Y&from_module=iblock&return_url=%2Ftours%2F%3Fbitrix_include_areas%3DY%26SECTION_ID%3D16%26clear_cache%3DY%26PAGEN_1%3D2";i:3;s:23:"Изменить тур";i:4;a:0:{}}i:1;a:5:{i:0;s:15:"AddDeleteAction";i:1;s:35:"59_7e1b8e3524755c391129a9d7e6f2d206";i:2;s:189:"/bitrix/admin/iblock_element_admin.php?IBLOCK_ID=8&type=trips&lang=ru&action=delete&ID=59&return_url=%2Ftours%2F%3Fbitrix_include_areas%3DY%26SECTION_ID%3D16%26clear_cache%3DY%26PAGEN_1%3D2";i:3;s:21:"Удалить тур";i:4;a:1:{s:7:"CONFIRM";s:123:"Будет удалена вся информация, связанная с этой записью. Продолжить?";}}i:2;a:5:{i:0;s:13:"AddEditAction";i:1;s:35:"58_362ce596257894d11ab5c1d73d13c755";i:2;s:235:"/bitrix/admin/cat_product_edit.php?IBLOCK_ID=8&type=trips&ID=58&lang=ru&force_catalog=1&filter_section=16&bxpublic=Y&from_module=iblock&return_url=%2Ftours%2F%3Fbitrix_include_areas%3DY%26SECTION_ID%3D16%26clear_cache%3DY%26PAGEN_1%3D2";i:3;s:23:"Изменить тур";i:4;a:0:{}}i:3;a:5:{i:0;s:15:"AddDeleteAction";i:1;s:35:"58_362ce596257894d11ab5c1d73d13c755";i:2;s:189:"/bitrix/admin/iblock_element_admin.php?IBLOCK_ID=8&type=trips&lang=ru&action=delete&ID=58&return_url=%2Ftours%2F%3Fbitrix_include_areas%3DY%26SECTION_ID%3D16%26clear_cache%3DY%26PAGEN_1%3D2";i:3;s:21:"Удалить тур";i:4;a:1:{s:7:"CONFIRM";s:123:"Будет удалена вся информация, связанная с этой записью. Продолжить?";}}}}}}';
+	</div>";s:4:"NAME";s:3:"123";s:17:"IBLOCK_SECTION_ID";N;s:16:"IPROPERTY_VALUES";a:0:{}s:16:"BACKGROUND_IMAGE";b:0;s:19:"USE_CATALOG_BUTTONS";a:1:{s:11:"add_product";b:1;}}s:18:"templateCachedData";a:11:{s:13:"additionalCSS";s:72:"/local/templates/gn/components/bitrix/catalog.section/.default/style.css";s:12:"additionalJS";s:72:"/local/templates/gn/components/bitrix/catalog.section/.default/script.js";s:9:"frameMode";b:1;s:11:"externalCss";a:1:{i:0;s:30:"/bitrix/css/main/bootstrap.css";}s:16:"component_epilog";a:5:{s:10:"epilogFile";s:83:"/local/templates/gn/components/bitrix/catalog.section/.default/component_epilog.php";s:12:"templateName";s:8:".default";s:12:"templateFile";s:75:"/local/templates/gn/components/bitrix/catalog.section/.default/template.php";s:14:"templateFolder";s:62:"/local/templates/gn/components/bitrix/catalog.section/.default";s:12:"templateData";a:4:{s:14:"TEMPLATE_THEME";s:3:"red";s:16:"TEMPLATE_LIBRARY";a:4:{i:0;s:5:"popup";i:1;s:4:"ajax";i:2;s:2:"fx";i:3;s:8:"currency";}s:10:"CURRENCIES";s:748:"[{\'CURRENCY\':\'BYN\',\'FORMAT\':{\'FORMAT_STRING\':\'# руб.\',\'DEC_POINT\':\'.\',\'THOUSANDS_SEP\':\'&nbsp;\',\'DECIMALS\':2,\'THOUSANDS_VARIANT\':\'B\',\'HIDE_ZERO\':\'Y\'}},{\'CURRENCY\':\'EUR\',\'FORMAT\':{\'FORMAT_STRING\':\'# &euro;\',\'DEC_POINT\':\'.\',\'THOUSANDS_SEP\':\'&nbsp;\',\'DECIMALS\':2,\'THOUSANDS_VARIANT\':\'B\',\'HIDE_ZERO\':\'Y\'}},{\'CURRENCY\':\'RUB\',\'FORMAT\':{\'FORMAT_STRING\':\'# &#8381;\',\'DEC_POINT\':\'.\',\'THOUSANDS_SEP\':\'&nbsp;\',\'DECIMALS\':2,\'THOUSANDS_VARIANT\':\'B\',\'HIDE_ZERO\':\'Y\'}},{\'CURRENCY\':\'UAH\',\'FORMAT\':{\'FORMAT_STRING\':\'# грн.\',\'DEC_POINT\':\'.\',\'THOUSANDS_SEP\':\'&nbsp;\',\'DECIMALS\':2,\'THOUSANDS_VARIANT\':\'B\',\'HIDE_ZERO\':\'Y\'}},{\'CURRENCY\':\'USD\',\'FORMAT\':{\'FORMAT_STRING\':\'$#\',\'DEC_POINT\':\'.\',\'THOUSANDS_SEP\':\',\',\'DECIMALS\':2,\'THOUSANDS_VARIANT\':\'C\',\'HIDE_ZERO\':\'Y\'}}]";s:24:"USE_PAGINATION_CONTAINER";b:1;}}s:8:"__NavNum";i:1;s:17:"__currentCounters";a:2:{s:19:"bitrix:catalog.item";i:2;s:28:"bitrix:system.pagenavigation";i:1;}s:14:"__children_css";a:3:{i:0;s:87:"/local/templates/gn/components/bitrix/system.pagenavigation/custom_pagination/style.css";i:1;s:65:"/local/templates/gn/components/bitrix/catalog.item/sdds/style.css";i:2;s:65:"/local/templates/gn/components/bitrix/catalog.item/sdds/style.css";}s:13:"__children_js";a:2:{i:0;s:65:"/local/templates/gn/components/bitrix/catalog.item/sdds/script.js";i:1;s:65:"/local/templates/gn/components/bitrix/catalog.item/sdds/script.js";}s:18:"__children_epilogs";a:2:{i:0;a:5:{s:10:"epilogFile";s:76:"/local/templates/gn/components/bitrix/catalog.item/sdds/component_epilog.php";s:12:"templateName";s:4:"sdds";s:12:"templateFile";s:68:"/local/templates/gn/components/bitrix/catalog.item/sdds/template.php";s:14:"templateFolder";s:55:"/local/templates/gn/components/bitrix/catalog.item/sdds";s:12:"templateData";a:2:{s:6:"JS_OBJ";s:51:"obbx_3966226736_59_7e1b8e3524755c391129a9d7e6f2d206";s:4:"ITEM";a:2:{s:2:"ID";i:59;s:9:"IBLOCK_ID";i:8;}}}i:1;a:5:{s:10:"epilogFile";s:76:"/local/templates/gn/components/bitrix/catalog.item/sdds/component_epilog.php";s:12:"templateName";s:4:"sdds";s:12:"templateFile";s:68:"/local/templates/gn/components/bitrix/catalog.item/sdds/template.php";s:14:"templateFolder";s:55:"/local/templates/gn/components/bitrix/catalog.item/sdds";s:12:"templateData";a:2:{s:6:"JS_OBJ";s:51:"obbx_3966226736_58_362ce596257894d11ab5c1d73d13c755";s:4:"ITEM";a:2:{s:2:"ID";i:58;s:9:"IBLOCK_ID";i:8;}}}}s:13:"__editButtons";a:4:{i:0;a:5:{i:0;s:13:"AddEditAction";i:1;s:35:"59_7e1b8e3524755c391129a9d7e6f2d206";i:2;s:235:"/bitrix/admin/cat_product_edit.php?IBLOCK_ID=8&type=trips&ID=59&lang=ru&force_catalog=1&filter_section=16&bxpublic=Y&from_module=iblock&return_url=%2Ftours%2F%3Fbitrix_include_areas%3DY%26SECTION_ID%3D16%26clear_cache%3DY%26PAGEN_1%3D2";i:3;s:23:"Изменить тур";i:4;a:0:{}}i:1;a:5:{i:0;s:15:"AddDeleteAction";i:1;s:35:"59_7e1b8e3524755c391129a9d7e6f2d206";i:2;s:189:"/bitrix/admin/iblock_element_admin.php?IBLOCK_ID=8&type=trips&lang=ru&action=delete&ID=59&return_url=%2Ftours%2F%3Fbitrix_include_areas%3DY%26SECTION_ID%3D16%26clear_cache%3DY%26PAGEN_1%3D2";i:3;s:21:"Удалить тур";i:4;a:1:{s:7:"CONFIRM";s:123:"Будет удалена вся информация, связанная с этой записью. Продолжить?";}}i:2;a:5:{i:0;s:13:"AddEditAction";i:1;s:35:"58_362ce596257894d11ab5c1d73d13c755";i:2;s:235:"/bitrix/admin/cat_product_edit.php?IBLOCK_ID=8&type=trips&ID=58&lang=ru&force_catalog=1&filter_section=16&bxpublic=Y&from_module=iblock&return_url=%2Ftours%2F%3Fbitrix_include_areas%3DY%26SECTION_ID%3D16%26clear_cache%3DY%26PAGEN_1%3D2";i:3;s:23:"Изменить тур";i:4;a:0:{}}i:3;a:5:{i:0;s:15:"AddDeleteAction";i:1;s:35:"58_362ce596257894d11ab5c1d73d13c755";i:2;s:189:"/bitrix/admin/iblock_element_admin.php?IBLOCK_ID=8&type=trips&lang=ru&action=delete&ID=58&return_url=%2Ftours%2F%3Fbitrix_include_areas%3DY%26SECTION_ID%3D16%26clear_cache%3DY%26PAGEN_1%3D2";i:3;s:21:"Удалить тур";i:4;a:1:{s:7:"CONFIRM";s:123:"Будет удалена вся информация, связанная с этой записью. Продолжить?";}}}}}}';
 return true;
 ?>

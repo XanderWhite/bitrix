@@ -1,0 +1,1 @@
+<?php /**PATH /var/www/workspace/bitrix/www/local/templates/gn/frontend/src/block/product/product-image/product-image.blade.php ENDPATH**/ ?>

@@ -2566,7 +2566,7 @@
 					}
 
 					strContent = '<div style="width: 100%; margin: 0; text-align: center;"><img src="'
-						+ strPict + '" height="130" style="max-height:130px"><p>' + this.product.name + '</p></div>';
+						+ strPict + '" height="500" style="max-height:500px"><p>' + this.product.name + '</p></div>';
 
 					if (this.showClosePopup)
 					{

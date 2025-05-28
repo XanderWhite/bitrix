@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001748350850';
-$dateexpire = '001784350850';
+$datecreate = '001748421304';
+$dateexpire = '001784421304';
 $ser_content = 'a:2:{s:7:"CONTENT";s:4759:"
 <div class="sale-products-gift bx-red" data-entity="sale-products-gift-container">
 	</div>
