@@ -1,0 +1,11 @@
+@use "style" as *;
+
+$block-name: "b-forms-form";
+
+.#{$block-name} {
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+}

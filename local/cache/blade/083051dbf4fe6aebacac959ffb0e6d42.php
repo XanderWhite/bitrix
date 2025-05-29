@@ -1,0 +1,1 @@
+<input class="<?php echo e($block->mod($mods ?? [])); ?><?php if($class ?? false): ?> <?php echo e($class); ?><?php endif; ?>" type="submit" name="<?php echo $name; ?>" value="<?php echo $value; ?>"><?php /**PATH /var/www/workspace/bitrix/www/local/templates/gn/frontend/src/block/forms/forms-submit/forms-submit.blade.php ENDPATH**/ ?>

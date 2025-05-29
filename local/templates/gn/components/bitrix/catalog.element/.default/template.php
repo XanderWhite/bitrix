@@ -18,7 +18,6 @@ use Bitrix\Catalog\ProductTable;
 $this->setFrameMode(true);
 $this->addExternalCss('/bitrix/css/main/bootstrap.css');
 
-echo 'dccdlc;d;';
 $templateLibrary = array('popup', 'fx', 'ui.fonts.opensans');
 $currencyList = '';
 
@@ -184,405 +183,43 @@ if (!empty($arParams['LABEL_PROP_POSITION'])) {
 ?>
 
 
+<!-- ==================================================================== -->
+
+<?
+echo \TAO::frontend()->renderBlock(
+	'common/product-detail',
+	[
+		'class' => 'container',
+		'productId' => $itemIds['ID'],
+		'displayName' => $arParams['DISPLAY_NAME'] === 'Y',
+		'title' => $name,
+		'pictSliderId' => $itemIds['BIG_SLIDER_ID'],
+		'discountPositionClass' => $discountPositionClass,
+		'discountId' => $itemIds['DISCOUNT_PERCENT_ID'],
+		'showDiscount' => $arParams['SHOW_DISCOUNT_PERCENT'] === 'Y',
+		'discountPercent' => $price['PERCENT'],
+		'mainImageSrc' => !empty($actualItem['MORE_PHOTO']) ? $actualItem['MORE_PHOTO'][0]['SRC'] : '',
+		'imgTitle' => $title,
+		'showOldPrice' => $arParams['SHOW_OLD_PRICE'] === 'Y',
+		'oldPriceId' => $itemIds['OLD_PRICE_ID'],
+		'showDiscount' => $showDiscount,
+		'formattedOldPrice' => $price['PRINT_RATIO_BASE_PRICE'],
+		'priceId' => $itemIds['PRICE_ID'],
+		'formattedPrice' => $price['PRINT_RATIO_PRICE'],
+		'basketActionsId' => $itemIds['BASKET_ACTIONS_ID'],
+		'canBuy' => $actualItem['CAN_BUY'],
+		'buttonSizeClass' => $buyButtonClassName,
+		'buyLinkId' => $itemIds['BUY_LINK'],
+		'buttonText' => $arParams['MESS_BTN_BUY'],
+		'countries' => $arResult['COUNTRIES'] ?? [],
+		'topics' => $arResult['TOPICS'] ?? [],
+		'travelType' => $arResult['TYPE'] ?? ''
+	]
+);
+?>
 
 
-
-
-
-
-
-
-
-<div class="bx-catalog-element bx-<?= $arParams['TEMPLATE_THEME'] ?>" id="<?= $itemIds['ID'] ?>"
-	itemscope itemtype="http://schema.org/Product">
-	<div class="container-fluid">
-
-		<!-- Заголовок -->
-
-		<?php
-		if ($arParams['DISPLAY_NAME'] === 'Y') {
-		?>
-			<div class="row">
-				<div class="col-xs-12">
-					<h1 class="bx-title"><?= $name ?></h1>
-				</div>
-			</div>
-		<?php
-		}
-		?>
-
-
-
-
-		<div class="row">
-			<div class="col-md-6 col-sm-12">
-				<div class="product-item-detail-slider-container" id="<?= $itemIds['BIG_SLIDER_ID'] ?>">
-					<span class="product-item-detail-slider-close" data-entity="close-popup"></span>
-					<div class="product-item-detail-slider-block
-						<?= ($arParams['IMAGE_RESOLUTION'] === '1by1' ? 'product-item-detail-slider-block-square' : '') ?>"
-						data-entity="images-slider-block">
-
-
-						<?php
-
-						?>
-					</div>
-
-					<!-- процент -->
-
-					<?php
-					if ($arParams['SHOW_DISCOUNT_PERCENT'] === 'Y') {
-						if ($haveOffers) {
-					?>
-							<div class="product-item-label-ring <?= $discountPositionClass ?>" id="<?= $itemIds['DISCOUNT_PERCENT_ID'] ?>"
-								style="display: none;">
-							</div>
-							<?php
-						} else {
-							if ($price['DISCOUNT'] > 0) {
-							?>
-								<div class="product-item-label-ring <?= $discountPositionClass ?>" id="<?= $itemIds['DISCOUNT_PERCENT_ID'] ?>"
-									title="<?= -$price['PERCENT'] ?>%">
-									<span><?= -$price['PERCENT'] ?>%</span>
-								</div>
-					<?php
-							}
-						}
-					}
-					?>
-
-
-					<!-- картинка -->
-					<div class="product-item-detail-slider-images-container" data-entity="images-container">
-						<?php
-						if (!empty($actualItem['MORE_PHOTO'])) {
-							foreach ($actualItem['MORE_PHOTO'] as $key => $photo) {
-						?>
-								<div class="product-item-detail-slider-image<?= ($key == 0 ? ' active' : '') ?>" data-entity="image" data-id="<?= $photo['ID'] ?>">
-									<img src="<?= $photo['SRC'] ?>" alt="<?= $alt ?>" title="<?= $title ?>" <?= ($key == 0 ? ' itemprop="image"' : '') ?>>
-								</div>
-						<?php
-							}
-						}
-
-						?>
-					</div>
-				</div>
-				<?php
-				?>
-			</div>
-		</div>
-
-		<!-- блок с деталями покупки -->
-		<div class="col-sm-6">
-			<div class="product-item-detail-pay-block">
-				<?php
-				foreach ($arParams['PRODUCT_PAY_BLOCK_ORDER'] as $blockName) {
-					switch ($blockName) {
-
-						// цена
-						case 'price':						?>
-							<div class="product-item-detail-info-container">
-								<?php
-								if ($arParams['SHOW_OLD_PRICE'] === 'Y') {
-								?>
-									<div class="product-item-detail-price-old" id="<?= $itemIds['OLD_PRICE_ID'] ?>"
-										style="display: <?= ($showDiscount ? '' : 'none') ?>;">
-										<?= ($showDiscount ? $price['PRINT_RATIO_BASE_PRICE'] : '') ?>
-									</div>
-								<?php
-								}
-								?>
-								<div class="product-item-detail-price-current" id="<?= $itemIds['PRICE_ID'] ?>">
-									<?= $price['PRINT_RATIO_PRICE'] ?>
-								</div>
-
-							</div>
-						<?php
-							break;
-
-
-						// кнопка покупки
-						case 'buttons':
-						?>
-							<div data-entity="main-button-container">
-								<div id="<?= $itemIds['BASKET_ACTIONS_ID'] ?>" style="display: <?= ($actualItem['CAN_BUY'] ? '' : 'none') ?>;">
-									<div class="product-item-detail-info-container">
-										<a class="btn <?= $buyButtonClassName ?> product-item-detail-buy-button" id="<?= $itemIds['BUY_LINK'] ?>"
-											href="javascript:void(0);">
-											<span><?= $arParams['MESS_BTN_BUY'] ?></span>
-										</a>
-									</div>
-
-								</div>
-							</div>
-				<?php
-							break;
-					}
-				}
-				?>
-			</div>
-		</div>
-
-
-
-	</div>
-
-
-	<!-- описание под картинкой -->
-
-	<div class="row">
-		<div class="col-sm-8 col-md-9">
-			<br><br>
-			<?php if (!empty($arResult['COUNTRIES'])): ?>
-				<div class="news-themes">
-					<b>Страны:</b>
-					<?php foreach ($arResult['COUNTRIES'] as $country) {
-						$countries[] = '<span  class="theme-link">' . $country['NAME'] . '</span>';
-					}
-					echo implode(', ', $countries);
-					?>
-				</div>
-			<?php endif; ?>
-
-			<?php if (!empty($arResult['TOPICS'])): ?>
-				<div class="news-themes">
-					<b>Тематика путешествий:</b>
-					<?php foreach ($arResult['TOPICS'] as $topic) {
-						$topics[] = '<span  class="theme-link">' . $topic['NAME'] . '</span>';
-					}
-					echo implode(', ', $topics);
-					?>
-				</div>
-			<?php endif; ?>
-
-			<?php if (!empty($arResult['TYPE'])): ?>
-				<div class="news-themes">
-					<b>Тип путешествия:</b>
-					<span class="theme-link"><?= $arResult['TYPE'] ?> </span>
-				</div>
-			<?php endif; ?>
-
-			<div class="row" id="<?= $itemIds['TABS_ID'] ?>">
-				<div class="col-xs-12">
-					<div class="product-item-detail-tabs-container">
-						<ul class="product-item-detail-tabs-list">
-							<?php
-							if ($showDescription) {
-							?>
-								<li class="product-item-detail-tab active" data-entity="tab" data-value="description">
-									<a href="javascript:void(0);" class="product-item-detail-tab-link">
-										<span><?= $arParams['MESS_DESCRIPTION_TAB'] ?></span>
-									</a>
-								</li>
-							<?php
-							}
-
-							if (!empty($arResult['DISPLAY_PROPERTIES']) || $arResult['SHOW_OFFERS_PROPS']) {
-							?>
-								<li class="product-item-detail-tab" data-entity="tab" data-value="properties">
-									<a href="javascript:void(0);" class="product-item-detail-tab-link">
-										<span><?= $arParams['MESS_PROPERTIES_TAB'] ?></span>
-									</a>
-								</li>
-							<?php
-							}
-
-							if ($arParams['USE_COMMENTS'] === 'Y') {
-							?>
-								<li class="product-item-detail-tab" data-entity="tab" data-value="comments">
-									<a href="javascript:void(0);" class="product-item-detail-tab-link">
-										<span><?= $arParams['MESS_COMMENTS_TAB'] ?></span>
-									</a>
-								</li>
-							<?php
-							}
-							?>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row" id="<?= $itemIds['TAB_CONTAINERS_ID'] ?>">
-				<div class="col-xs-12">
-					<?php
-					if ($showDescription) {
-					?>
-						<div class="product-item-detail-tab-content active" data-entity="tab-container" data-value="description"
-							itemprop="description" id="<?= $itemIds['DESCRIPTION_ID'] ?>">
-							<?php
-							if (
-								$arResult['PREVIEW_TEXT'] != ''
-								&& (
-									$arParams['DISPLAY_PREVIEW_TEXT_MODE'] === 'S'
-									|| ($arParams['DISPLAY_PREVIEW_TEXT_MODE'] === 'E' && $arResult['DETAIL_TEXT'] == '')
-								)
-							) {
-								echo $arResult['PREVIEW_TEXT_TYPE'] === 'html' ? $arResult['PREVIEW_TEXT'] : '<p>' . $arResult['PREVIEW_TEXT'] . '</p>';
-							}
-
-							if ($arResult['DETAIL_TEXT'] != '') {
-								echo $arResult['DETAIL_TEXT_TYPE'] === 'html' ? $arResult['DETAIL_TEXT'] : '<p>' . $arResult['DETAIL_TEXT'] . '</p>';
-							}
-							?>
-						</div>
-					<?php
-					}
-
-					if (!empty($arResult['DISPLAY_PROPERTIES']) || $arResult['SHOW_OFFERS_PROPS']) {
-					?>
-						<div class="product-item-detail-tab-content" data-entity="tab-container" data-value="properties">
-							<?php
-							if (!empty($arResult['DISPLAY_PROPERTIES'])) {
-							?>
-								<dl class="product-item-detail-properties">
-									<?php
-									foreach ($arResult['DISPLAY_PROPERTIES'] as $property) {
-									?>
-										<dt><?= $property['NAME'] ?></dt>
-										<dd><?= (
-												is_array($property['DISPLAY_VALUE'])
-												? implode(' / ', $property['DISPLAY_VALUE'])
-												: $property['DISPLAY_VALUE']
-											) ?>
-										</dd>
-									<?php
-									}
-									unset($property);
-									?>
-								</dl>
-							<?php
-							}
-
-							if ($arResult['SHOW_OFFERS_PROPS']) {
-							?>
-								<dl class="product-item-detail-properties" id="<?= $itemIds['DISPLAY_PROP_DIV'] ?>"></dl>
-							<?php
-							}
-							?>
-						</div>
-					<?php
-					}
-
-					if ($arParams['USE_COMMENTS'] === 'Y') {
-					?>
-						<div class="product-item-detail-tab-content" data-entity="tab-container" data-value="comments" style="display: none;">
-							<?php
-							$componentCommentsParams = array(
-								'ELEMENT_ID' => $arResult['ID'],
-								'ELEMENT_CODE' => '',
-								'IBLOCK_ID' => $arParams['IBLOCK_ID'],
-								'SHOW_DEACTIVATED' => $arParams['SHOW_DEACTIVATED'],
-								'URL_TO_COMMENT' => '',
-								'WIDTH' => '',
-								'COMMENTS_COUNT' => '5',
-								'BLOG_USE' => $arParams['BLOG_USE'],
-								'FB_USE' => $arParams['FB_USE'],
-								'FB_APP_ID' => $arParams['FB_APP_ID'],
-								'VK_USE' => $arParams['VK_USE'],
-								'VK_API_ID' => $arParams['VK_API_ID'],
-								'CACHE_TYPE' => $arParams['CACHE_TYPE'],
-								'CACHE_TIME' => $arParams['CACHE_TIME'],
-								'CACHE_GROUPS' => $arParams['CACHE_GROUPS'],
-								'BLOG_TITLE' => '',
-								'BLOG_URL' => $arParams['BLOG_URL'],
-								'PATH_TO_SMILE' => '',
-								'EMAIL_NOTIFY' => $arParams['BLOG_EMAIL_NOTIFY'],
-								'AJAX_POST' => 'Y',
-								'SHOW_SPAM' => 'Y',
-								'SHOW_RATING' => 'N',
-								'FB_TITLE' => '',
-								'FB_USER_ADMIN_ID' => '',
-								'FB_COLORSCHEME' => 'light',
-								'FB_ORDER_BY' => 'reverse_time',
-								'VK_TITLE' => '',
-								'TEMPLATE_THEME' => $arParams['~TEMPLATE_THEME']
-							);
-							if (isset($arParams["USER_CONSENT"]))
-								$componentCommentsParams["USER_CONSENT"] = $arParams["USER_CONSENT"];
-							if (isset($arParams["USER_CONSENT_ID"]))
-								$componentCommentsParams["USER_CONSENT_ID"] = $arParams["USER_CONSENT_ID"];
-							if (isset($arParams["USER_CONSENT_IS_CHECKED"]))
-								$componentCommentsParams["USER_CONSENT_IS_CHECKED"] = $arParams["USER_CONSENT_IS_CHECKED"];
-							if (isset($arParams["USER_CONSENT_IS_LOADED"]))
-								$componentCommentsParams["USER_CONSENT_IS_LOADED"] = $arParams["USER_CONSENT_IS_LOADED"];
-							$APPLICATION->IncludeComponent(
-								'bitrix:catalog.comments',
-								'',
-								$componentCommentsParams,
-								$component,
-								array('HIDE_ICONS' => 'Y')
-							);
-							?>
-						</div>
-					<?php
-					}
-					?>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-4 col-md-3">
-			<div>
-				<?php
-				if ($arParams['BRAND_USE'] === 'Y') {
-					$APPLICATION->IncludeComponent(
-						'bitrix:catalog.brandblock',
-						'.default',
-						array(
-							'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
-							'IBLOCK_ID' => $arParams['IBLOCK_ID'],
-							'ELEMENT_ID' => $arResult['ID'],
-							'ELEMENT_CODE' => '',
-							'PROP_CODE' => $arParams['BRAND_PROP_CODE'],
-							'CACHE_TYPE' => $arParams['CACHE_TYPE'],
-							'CACHE_TIME' => $arParams['CACHE_TIME'],
-							'CACHE_GROUPS' => $arParams['CACHE_GROUPS'],
-							'WIDTH' => '',
-							'HEIGHT' => ''
-						),
-						$component,
-						array('HIDE_ICONS' => 'Y')
-					);
-				}
-				?>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12">
-			<?php
-			if ($arResult['CATALOG'] && $actualItem['CAN_BUY'] && \Bitrix\Main\ModuleManager::isModuleInstalled('sale')) {
-				$APPLICATION->IncludeComponent(
-					'bitrix:sale.prediction.product.detail',
-					'.default',
-					array(
-						'BUTTON_ID' => $showBuyBtn ? $itemIds['BUY_LINK'] : $itemIds['ADD_BASKET_LINK'],
-						'CUSTOM_SITE_ID' => $arParams['CUSTOM_SITE_ID'] ?? null,
-						'POTENTIAL_PRODUCT_TO_BUY' => array(
-							'ID' => $arResult['ID'] ?? null,
-							'MODULE' => $arResult['MODULE'] ?? 'catalog',
-							'PRODUCT_PROVIDER_CLASS' => $arResult['~PRODUCT_PROVIDER_CLASS'] ?? \Bitrix\Catalog\Product\Basket::getDefaultProviderName(),
-							'QUANTITY' => $arResult['QUANTITY'] ?? null,
-							'IBLOCK_ID' => $arResult['IBLOCK_ID'] ?? null,
-
-							'PRIMARY_OFFER_ID' => $arResult['OFFERS'][0]['ID'] ?? null,
-							'SECTION' => array(
-								'ID' => $arResult['SECTION']['ID'] ?? null,
-								'IBLOCK_ID' => $arResult['SECTION']['IBLOCK_ID'] ?? null,
-								'LEFT_MARGIN' => $arResult['SECTION']['LEFT_MARGIN'] ?? null,
-								'RIGHT_MARGIN' => $arResult['SECTION']['RIGHT_MARGIN'] ?? null,
-							),
-						)
-					),
-					$component,
-					array('HIDE_ICONS' => 'Y')
-				);
-			}
-
-			?>
-		</div>
-	</div>
-</div>
-
+<!-- ==================================================================== -->
 
 <meta itemprop="name" content="<?= $name ?>" />
 <meta itemprop="category" content="<?= $arResult['CATEGORY_PATH'] ?>" />

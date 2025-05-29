@@ -1,0 +1,7 @@
+@use "style" as *;
+
+$block-name: "b-forms-checkbox";
+
+.#{$block-name} {
+	text-align: center;
+}

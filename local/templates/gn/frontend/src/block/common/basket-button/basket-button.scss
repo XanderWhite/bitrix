@@ -1,0 +1,12 @@
+@use "style" as *;
+
+$block-name: "b-basket-button";
+
+div .bx-blue .btn.#{$block-name} {
+	background-color: $color-accent;
+
+	&:hover {
+		background-color: rgba($color-accent, 50%);
+		color: $color-accent;
+	}
+}

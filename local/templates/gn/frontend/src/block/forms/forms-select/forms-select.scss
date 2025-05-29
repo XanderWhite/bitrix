@@ -1,0 +1,11 @@
+@use "style" as *;
+
+$block-name: "b-forms-select";
+
+.#{$block-name} {
+	&__select {
+		background-color: #fff;
+
+		@include input-style($color-accent);
+	}
+}

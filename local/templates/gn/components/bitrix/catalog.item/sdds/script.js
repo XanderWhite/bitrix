@@ -2566,7 +2566,7 @@
 					}
 
 					strContent = '<div style="width: 100%; margin: 0; text-align: center;"><img src="'
-						+ strPict + '" height="500" style="max-height:500px"><p>' + this.product.name + '</p></div>';
+						+ strPict + '" height="300" style="max-height:300px"><p>' + this.product.name + '</p></div>';
 
 					if (this.showClosePopup)
 					{
@@ -2593,7 +2593,8 @@
 								text: BX.message("BTN_MESSAGE_BASKET_REDIRECT"),
 								events: {
 									click: BX.delegate(this.basketRedirect, this)
-								}
+								},
+								style: {backgroundColor: 'rgb(132 24 68)', border: 'none', padding: '10px 20px', fontSize: '18px', borderRadius: '5px'}
 							})
 						];
 					}

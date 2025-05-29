@@ -1,10 +1,12 @@
 <div class="<?php echo $block->mod($mods ?? []); ?><?php if($class ?? false): ?> <?php echo $class; ?><?php endif; ?>">
     <!-- Изображение -->
-  <div>
-        <span id="<?= $pictSliderId ?>">
+    <div>
+
+        <!-- блок для работы кнопки покупки -->
+        <span id="<?= $pictSliderId ?>"><span id="<?= $secondPictId ?>">
+            </span>
         </span>
-        <span id="<?= $secondPictId ?>">
-        </span>
+
     </div>
     <?php if($hasDetailUrl): ?>
     <a class="<?php echo $block->elem('link'); ?>" href="<?php echo $detailUrl; ?>" title="<?php echo $imgTitle; ?>">

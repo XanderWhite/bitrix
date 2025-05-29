@@ -1,0 +1,18 @@
+@use "style" as *;
+
+$block-name: "b-forms-submit";
+
+.#{$block-name} {
+	@include input-style($color-accent);
+
+	font-size: 20px;
+	color: #fff;
+	background-color: $color-accent;
+	cursor: pointer;
+	transition: 0.3s;
+
+	&:hover {
+		background-color: #fff;
+		color: $color-accent;
+	}
+}

@@ -1,10 +1,15 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+
+//подключаем новую сборку из src/entry
+\TAO::frontendCss('form');
+\TAO::frontendJs('form');
+
 $APPLICATION->SetTitle("Страны:");
 ?><section class="country-section container">
  <?$APPLICATION->IncludeComponent(
-	"ns:country.list", 
-	".default", 
+	"ns:country.list",
+	".default",
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_ID" => "6"

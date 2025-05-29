@@ -1,0 +1,15 @@
+@use "style" as *;
+
+$block-name: "b-forms-mail";
+
+.#{$block-name} {
+	&__input {
+		@include input-style($color-accent);
+	}
+
+	&__label {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

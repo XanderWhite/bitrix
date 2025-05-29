@@ -1,0 +1,1 @@
+<input class="{{ $block->mod($mods ?? []) }}@if($class ?? false) {{ $class }}@endif" type="submit" name="{!! $name !!}" value="{!! $value !!}">

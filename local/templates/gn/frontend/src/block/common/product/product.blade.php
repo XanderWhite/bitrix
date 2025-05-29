@@ -1,10 +1,12 @@
 <div class="{!! $block->mod($mods ?? []) !!}@if($class ?? false) {!! $class !!}@endif">
     <!-- Изображение -->
-  <div>
-        <span id="<?= $pictSliderId ?>">
+    <div>
+
+        <!-- блок для работы кнопки покупки -->
+        <span id="<?= $pictSliderId ?>"><span id="<?= $secondPictId ?>">
+            </span>
         </span>
-        <span id="<?= $secondPictId ?>">
-        </span>
+
     </div>
     @if($hasDetailUrl)
     <a class="{!! $block->elem('link') !!}" href="{!! $detailUrl !!}" title="{!! $imgTitle !!}">
