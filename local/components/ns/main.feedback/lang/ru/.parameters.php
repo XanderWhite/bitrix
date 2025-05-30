@@ -9,4 +9,5 @@ $MESS ['MFP_NAME'] = "Имя";
 $MESS ['MFP_MESSAGE'] = "Сообщение";
 $MESS ['MFP_EMAIL_TEMPLATES'] = "Почтовые шаблоны для отправки письма";
 $MESS ['MFP_COUNTRY'] = "Страна";
+$MESS ['MFP_PHONE'] = "Телефон";
 ?>

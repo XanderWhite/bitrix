@@ -24,7 +24,8 @@ $arParams["OK_TEXT"] = trim($arParams["OK_TEXT"] ?? '');
 if ($arParams["OK_TEXT"] == '')
 	$arParams["OK_TEXT"] = GetMessage("MF_OK_MESSAGE");
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["submit"]) && (!isset($_POST["PARAMS_HASH"]) || $arResult["PARAMS_HASH"] === $_POST["PARAMS_HASH"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && (!isset($_POST["PARAMS_HASH"]) || $arResult["PARAMS_HASH"] === $_POST["PARAMS_HASH"])) {
+
 	$arResult["ERROR_MESSAGE"] = array();
 	if (check_bitrix_sessid()) {
 		if (empty($arParams["REQUIRED_FIELDS"]) || !in_array("NONE", $arParams["REQUIRED_FIELDS"])) {
@@ -32,11 +33,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["submit"]) && (!isset(
 				$arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_NAME");
 			if ((empty($arParams["REQUIRED_FIELDS"]) || in_array("EMAIL", $arParams["REQUIRED_FIELDS"])) && mb_strlen($_POST["user_email"]) <= 1)
 				$arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_EMAIL");
+			if ((empty($arParams["REQUIRED_FIELDS"]) || in_array("PHONE", $arParams["REQUIRED_FIELDS"])) && mb_strlen($_POST["user_phone"]) <= 1)
+				$arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_PHONE");
 			if ((empty($arParams["REQUIRED_FIELDS"]) || in_array("MESSAGE", $arParams["REQUIRED_FIELDS"])) && mb_strlen($_POST["MESSAGE"]) <= 3)
 				$arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_MESSAGE");
 
 			if ((empty($arParams["REQUIRED_FIELDS"]) || in_array("COUNTRY", $arParams["REQUIRED_FIELDS"])) && mb_strlen($_POST["user_country"]) <= 1)
 				$arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_COUNTRY");
+
+
 		}
 		if (mb_strlen($_POST["user_email"]) > 1 && !check_email($_POST["user_email"]))
 			$arResult["ERROR_MESSAGE"][] = GetMessage("MF_EMAIL_NOT_VALID");
@@ -50,11 +55,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["submit"]) && (!isset(
 			} else
 				$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
 		}
+
+
 		if (empty($arResult["ERROR_MESSAGE"])) {
+
 			$arFields = array(
 				"AUTHOR" => $_POST["user_name"],
 				"AUTHOR_EMAIL" => $_POST["user_email"],
+				"AUTHOR_PHONE" => $_POST["user_phone"],
 				"EMAIL_TO" => $arParams["EMAIL_TO"],
+
 				"TEXT" => $_POST["MESSAGE"],
 				"AUTHOR_COUNTRY" => $_POST["user_country"],
 			);
@@ -74,8 +84,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["submit"]) && (!isset(
 		$arResult["MESSAGE"] = htmlspecialcharsbx($_POST["MESSAGE"]);
 		$arResult["AUTHOR_NAME"] = htmlspecialcharsbx($_POST["user_name"]);
 		$arResult["AUTHOR_EMAIL"] = htmlspecialcharsbx($_POST["user_email"]);
-		$arResult["AUTHOR_COUNTRY"] = htmlspecialcharsbx($_POST["user_country"]);
+		$arResult["AUTHOR_PHONE"] = htmlspecialcharsbx($_POST["user_phone"]);
 
+		$arResult["AUTHOR_COUNTRY"] = htmlspecialcharsbx($_POST["user_country"]);
 	} else
 		$arResult["ERROR_MESSAGE"][] = GetMessage("MF_SESS_EXP");
 } elseif (isset($_REQUEST["success"]) && $_REQUEST["success"] == $arResult["PARAMS_HASH"]) {

@@ -1,4 +1,4 @@
-<form class='{!! $block->mod($mods ?? []) !!}'  action="{!! $action !!}" method="{!! $method !!}">
+<form class='{!! $block->mod($mods ?? []) !!}'  action="{!! $action !!}" method="{!! $method !!}" name="myform" id="myform">
     {!! $bitrixSessidPost !!}
 
     <div class='{!! $block->elem("wrapper") !!}'>

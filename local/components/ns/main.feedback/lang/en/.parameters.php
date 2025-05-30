@@ -9,4 +9,5 @@ $MESS ['MFP_NAME'] = "Name";
 $MESS ['MFP_MESSAGE'] = "Message";
 $MESS ['MFP_EMAIL_TEMPLATES'] = "E-mail Templates";
 $MESS ['MFP_COUNTRY'] = "Country";
+$MESS ['MFP_PHONE'] = "Phone";
 ?>

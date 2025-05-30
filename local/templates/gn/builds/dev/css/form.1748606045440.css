@@ -1,0 +1,114 @@
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/forms/forms-checkbox/forms-checkbox.scss ***!
+  \*******************************************************************************************************************************************************************************************************************/
+.b-forms-checkbox {
+  text-align: center;
+}
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/forms/forms-form/forms-form.scss ***!
+  \***********************************************************************************************************************************************************************************************************/
+.b-forms-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/forms/forms-mail/forms-mail.scss ***!
+  \***********************************************************************************************************************************************************************************************************/
+.b-forms-mail__input {
+  border: 2px rgb(132, 24, 68) solid;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+.b-forms-mail__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/forms/forms-notification/forms-notification.scss ***!
+  \***************************************************************************************************************************************************************************************************************************/
+.b-forms-notification {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.b-forms-notification__ok-message {
+  color: green;
+}
+.b-forms-notification__error-message {
+  color: red;
+}
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/forms/forms-phone/forms-phone.scss ***!
+  \*************************************************************************************************************************************************************************************************************/
+.b-forms-phone__input {
+  border: 2px rgb(132, 24, 68) solid;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+.b-forms-phone__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/forms/forms-select/forms-select.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
+.b-forms-select__select {
+  background-color: #fff;
+  border: 2px rgb(132, 24, 68) solid;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/forms/forms-submit/forms-submit.scss ***!
+  \***************************************************************************************************************************************************************************************************************/
+.b-forms-submit {
+  border: 2px rgb(132, 24, 68) solid;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgb(132, 24, 68);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.b-forms-submit:hover {
+  background-color: #fff;
+  color: rgb(132, 24, 68);
+}
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/forms/forms-text/forms-text.scss ***!
+  \***********************************************************************************************************************************************************************************************************/
+.b-forms-text__input {
+  border: 2px rgb(132, 24, 68) solid;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+.b-forms-text__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/forms/forms-textarea/forms-textarea.scss ***!
+  \*******************************************************************************************************************************************************************************************************************/
+.b-forms-textarea__input {
+  border: 2px rgb(132, 24, 68) solid;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+.b-forms-textarea__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=form.1748606045440.css.map*/

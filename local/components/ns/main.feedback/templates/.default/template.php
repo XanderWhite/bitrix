@@ -11,14 +11,14 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
  */
 ?>
 <div class="mfeedback">
-	<? if (!empty($arResult["ERROR_MESSAGE"])) {
-		foreach ($arResult["ERROR_MESSAGE"] as $v)
-			ShowError($v);
-	}
-	if (!empty($arResult["OK_MESSAGE"])) {
-	?><div class="mf-ok-text"><?= $arResult["OK_MESSAGE"] ?></div><?
-																}
-																	?>
+	<? echo \TAO::frontend()->renderBlock(
+		'forms/forms-notification',
+		[
+			'okMessage' => $arResult["OK_MESSAGE"]
+		]
+	) ?>
+
+
 	<? echo \TAO::frontend()->renderBlock(
 		'forms/forms-form',
 		[
@@ -45,6 +45,17 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 						'required' => empty($arParams["REQUIRED_FIELDS"]) || in_array("EMAIL", $arParams["REQUIRED_FIELDS"]),
 					]
 				),
+
+				\TAO::frontend()->renderBlock(
+					'forms/forms-phone',
+					[
+						'name' => 'user_phone',
+						'label' => GetMessage("MFT_PHONE"),
+						'value' => $arResult["AUTHOR_PHONE"],
+						'required' => empty($arParams["REQUIRED_FIELDS"]) || in_array("PHONE", $arParams["REQUIRED_FIELDS"]),
+					]
+				),
+
 
 				\TAO::frontend()->renderBlock(
 					'forms/forms-select',
@@ -83,7 +94,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 				\TAO::frontend()->renderBlock(
 					'forms/forms-submit',
 					[
-						'name' => 'submit',
+						'name' => 'submitBtn',
 						'value' => GetMessage("MFT_SUBMIT"),
 					]
 				)

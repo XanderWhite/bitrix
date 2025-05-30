@@ -1,0 +1,17 @@
+@use "style" as *;
+
+$block-name: "b-forms-notification";
+
+.#{$block-name} {
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: 700;
+
+	&__ok-message {
+		color: green;
+	}
+
+	&__error-message {
+		color: red;
+	}
+}

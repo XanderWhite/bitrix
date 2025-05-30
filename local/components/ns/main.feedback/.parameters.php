@@ -35,7 +35,7 @@ $arComponentParameters = array(
 			"NAME" => GetMessage("MFP_REQUIRED_FIELDS"),
 			"TYPE" => "LIST",
 			"MULTIPLE" => "Y",
-			"VALUES" => array("NONE" => GetMessage("MFP_ALL_REQ"), "NAME" => GetMessage("MFP_NAME"), "EMAIL" => "E-mail", "MESSAGE" => GetMessage("MFP_MESSAGE"), "COUNTRY" => GetMessage("MFP_COUNTRY")),
+			"VALUES" => array("NONE" => GetMessage("MFP_ALL_REQ"), "NAME" => GetMessage("MFP_NAME"), "EMAIL" => "E-mail", "MESSAGE" => GetMessage("MFP_MESSAGE"), "COUNTRY" => GetMessage("MFP_COUNTRY"), "PHONE" => GetMessage("MFP_PHONE")),
 			"DEFAULT" => "",
 			"COLS" => 25,
 			"PARENT" => "BASE",

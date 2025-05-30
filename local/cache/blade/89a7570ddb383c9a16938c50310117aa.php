@@ -1,4 +1,4 @@
-<form class='<?php echo $block->mod($mods ?? []); ?>'  action="<?php echo $action; ?>" method="<?php echo $method; ?>">
+<form class='<?php echo $block->mod($mods ?? []); ?>'  action="<?php echo $action; ?>" method="<?php echo $method; ?>" name="myform" id="myform">
     <?php echo $bitrixSessidPost; ?>
 
 

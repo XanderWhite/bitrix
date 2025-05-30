@@ -1,1 +1,1 @@
- <h2 class="{{ $block->mod($mods ?? []) }}">{{ $title }}</h2>
+ <h2 class="{{ $block->mod($mods ?? []) }}@if($class ?? false) {{ $class }}@endif">{{ $title }}</h2>

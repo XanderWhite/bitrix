@@ -8,16 +8,16 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Страны:");
 ?><section class="country-section container">
  <?$APPLICATION->IncludeComponent(
-	"ns:country.list",
-	".default",
+	"ns:country.list", 
+	".default", 
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_ID" => "6"
 	),
 	false
 );?> <?$APPLICATION->IncludeComponent(
-	"ns:main.feedback",
-	".default",
+	"ns:main.feedback", 
+	".default", 
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
 		"EMAIL_TO" => "belov@techart.ru",
@@ -31,6 +31,7 @@ $APPLICATION->SetTitle("Страны:");
 			1 => "EMAIL",
 			2 => "MESSAGE",
 			3 => "COUNTRY",
+			4 => "PHONE",
 		),
 		"USE_CAPTCHA" => "N"
 	),

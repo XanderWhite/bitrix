@@ -11,7 +11,7 @@ class CountryListComponent extends CBitrixComponent
         }
 
         $filter = [
-            'IBLOCK_ID' => 6,//$this->arParams['IBLOCK_ID'],
+            'IBLOCK_ID' => $this->arParams['IBLOCK_ID'],
             'ACTIVE' => 'Y',
         ];
 
