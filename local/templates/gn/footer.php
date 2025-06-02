@@ -24,6 +24,7 @@ echo \TAO::frontend()->renderBlock(
 ); ?>
 
 </div>
+
 </body>
 
 </html>

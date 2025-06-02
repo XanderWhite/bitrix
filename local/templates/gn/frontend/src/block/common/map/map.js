@@ -1,45 +1,111 @@
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', () => {
+
+	const tabs = document.querySelectorAll('[data-office]');
+	const officeElements = document.getElementById('offices').children;
+
 	const offices = {
 		tula: {
-			mapId: 'yandex-map1',
-			coords: [54.200836, 37.584659],
+			mapId: 'map1',
+			coords: [37.584659, 54.200836],
 			address: "300041, г. Тула, ул. Ф. Смирнова ул., д. 28, оф. 601-602, 701, 703-707, 712\nТел. / Факс: (4872) 250-450, 57-05-01",
 		},
 		moscow: {
-			mapId: 'yandex-map-2',
-			coords: [55.630407, 37.606881],
-			address: "115230, г. Москва, Варшавское шоссе, д. 47, к. 4, оф. 1224 (12 этаж)\nТел. / Факс: (495) 933-62-10",
-		}
+			mapId: 'map2',
+			coords: [37.606881, 55.630407],
+			address: "115230, г. Москва, Варшавское шоссе, д. 47, к. 4, оф. 1224 (12 этаж)\nТел. / Факс: (495) 933-62-10",		}
 	};
 
-	const children = document.getElementById('offices').children;
-  	const tabs = document.querySelectorAll('[data-office]');
+	async function initMap(office) {
+		try {
+			await window.ymaps3.ready;
 
-	async function  initMap(office) {
-		await window.ymaps3.ready;
+			const {
+				YMap,
+				YMapDefaultSchemeLayer,
+				YMapDefaultFeaturesLayer,
+				YMapMarker,
+			} = window.ymaps3;
 
-		const container = document.getElementById(office.mapId);
-		console.log(container);
-		const map = new window.ymaps3.YMap(container, { location: {
-			center: office.coords,
-			zoom: 16,
-			controls: ['zoomControl']
-		}});
-		// const placemark = new window.ymaps3.Placemark(office.coords, {
-		// 	balloonContent: office.address.replace(/\n/g, '<br>')
-		// }, {
-		// 	preset: 'islands#redDotIcon'
-		// });
+			const mapContainer = document.getElementById(office.mapId);
 
-		// map.geoObjects.add(placemark);
+			const map = new YMap(mapContainer, {
+				location: {
+					center: office.coords,
+					zoom: 16,
+				},
+			});
 
-		// if (document.querySelector(`[data-office="${office.mapId === 'yandex-map1' ? 'tula' : 'moscow'}"].active`)) {
-		// 	placemark.balloon.open();
-		// }
+			map.addChild(new YMapDefaultSchemeLayer());
+			map.addChild(new YMapDefaultFeaturesLayer());
+			const markerElement = document.createElement("div");
+			markerElement.classList.add('marker');
 
-		// window.addEventListener('resize', function() {
-		// 	map.container.fitToViewport();
-		// });
+			const marker = new YMapMarker(
+				{ coordinates: office.coords, title: "Наш офис" },
+				markerElement
+			);
+			map.addChild(marker);
+
+			let balloon = null;
+
+			function closeBalloon() {
+				if (balloon) {
+					balloon.remove();
+					balloon = null;
+				}
+			}
+
+			markerElement.addEventListener("click", (e) => {
+				e.stopPropagation();
+
+				if (balloon) {
+					closeBalloon();
+					return;
+				}
+
+				balloon = document.createElement("div");
+				balloon.classList.add('balloon');
+				balloon.innerHTML = office.address;
+
+				mapContainer.appendChild(balloon);
+
+				const markerRect = markerElement.getBoundingClientRect();
+				const containerRect = mapContainer.getBoundingClientRect();
+
+				balloon.style.left = `${markerRect.left - containerRect.left - balloon.offsetWidth/2  + markerRect.width/2}px`;
+				balloon.style.top = `${markerRect.top - containerRect.top - balloon.offsetHeight - 10}px`;
+
+
+			});
+
+			document.addEventListener("click", (e) => {
+				if (balloon && !balloon.contains(e.target) && e.target !== markerElement) {
+					closeBalloon();
+				}
+			});
+
+			window.addEventListener("resize",() => {
+				map.updateSize();
+				if (balloon) {
+					const markerRect = markerElement.getBoundingClientRect();
+					const containerRect = mapContainer.getBoundingClientRect();
+
+					balloon.style.left = `${markerRect.left - containerRect.left - balloon.offsetWidth/2 + markerRect.width/2}px`;
+					balloon.style.top = `${markerRect.top - containerRect.top - balloon.offsetHeight - 10}px`;
+				}
+			});
+
+		} catch (error) {
+			console.error("Ошибка при инициализации карты:", error);
+		}
+	}
+
+	function initAllMaps() {
+		Object.values(offices).forEach(office => {
+			if (document.getElementById(office.mapId)) {
+				initMap(office);
+			}
+		});
 	}
 
 	function switchOffice(office) {
@@ -51,7 +117,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 			}
 		});
 
-		Array.from(children).forEach(block => {
+		Array.from(officeElements).forEach(block => {
 			if (block.dataset.office === office) {
 				block.classList.add('active');
 			} else {
@@ -65,8 +131,5 @@ document.addEventListener('DOMContentLoaded', async function() {
 		});
 	});
 
-
-
-	await initMap(offices.tula);
-
+	initAllMaps();
 });

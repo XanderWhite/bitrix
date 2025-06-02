@@ -11,7 +11,7 @@
     <div class="{{ $block->elem('content') }} " id='offices'>
         <div class="{{ $block->elem('office') }} active" data-office="tula">
 
-            <div id="yandex-map1" class="{{ $block->elem('map') }} "></div>
+            <div id="map1" class="{{ $block->elem('map') }} "></div>
 
             <div class="{{ $block->elem('description') }}">
                 <h3 class="{{ $block->elem('title') }}">Офис в Туле</h3>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="{{ $block->elem('office') }}" data-office="moscow">
-            <div id="yandex-map-2" class="{{ $block->elem('map') }}"></div>
+            <div id="map2" class="{{ $block->elem('map') }}"></div>
 
             <div class="{{ $block->elem('description') }}">
                 <h3 class="{{ $block->elem('title') }}">Офис в Москве</h3>

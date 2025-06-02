@@ -93,7 +93,7 @@ $APPLICATION->IncludeComponent(
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",
-		"NEWS_COUNT" => "1",
+		"NEWS_COUNT" => "3",
 		"FILTER_NAME" => "combinedFilter",
 	)
 );

@@ -1,9 +1,12 @@
 <?
+$arResult["LAST-NEWS"] = [];
 
-$arResult["LAST-NEWS"] = [
-   'name' => $arResult["ITEMS"][0]["NAME"],
-   "text" => $arResult["ITEMS"][0]["PREVIEW_TEXT"],
-   "url" => $arResult["ITEMS"][0]["DETAIL_PAGE_URL"],
-   "pathPic" => $arResult["ITEMS"][0]["PREVIEW_PICTURE"]["SRC"],
-   'class' => 'container'
-];
+foreach ($arResult["ITEMS"] as $item) {
+  $arResult["LAST-NEWS"][] = [
+        'name' => $item["NAME"],
+        'text' => $item["PREVIEW_TEXT"],
+        'url' =>  $item["DETAIL_PAGE_URL"],
+        'pathPic' =>  $item["PREVIEW_PICTURE"]["SRC"],
+        'class' => 'container'
+    ];
+}

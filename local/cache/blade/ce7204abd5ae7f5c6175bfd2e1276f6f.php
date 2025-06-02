@@ -11,7 +11,7 @@
     <div class="<?php echo e($block->elem('content')); ?> " id='offices'>
         <div class="<?php echo e($block->elem('office')); ?> active" data-office="tula">
 
-            <div id="yandex-map1" class="<?php echo e($block->elem('map')); ?> "></div>
+            <div id="map1" class="<?php echo e($block->elem('map')); ?> "></div>
 
             <div class="<?php echo e($block->elem('description')); ?>">
                 <h3 class="<?php echo e($block->elem('title')); ?>">Офис в Туле</h3>
@@ -23,7 +23,7 @@
         </div>
 
         <div class="<?php echo e($block->elem('office')); ?>" data-office="moscow">
-            <div id="yandex-map-2" class="<?php echo e($block->elem('map')); ?>"></div>
+            <div id="map2" class="<?php echo e($block->elem('map')); ?>"></div>
 
             <div class="<?php echo e($block->elem('description')); ?>">
                 <h3 class="<?php echo e($block->elem('title')); ?>">Офис в Москве</h3>

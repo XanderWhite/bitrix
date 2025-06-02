@@ -18,6 +18,7 @@
 	?>
 	<? $APPLICATION->ShowHead(); ?>
 	<title><? $APPLICATION->ShowTitle(); ?></title>
+
 </head>
 
 <body>

@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/local/templates/gn/components/bitrix/catalog/tours/style.css" => "1747741172959","/local/templates/gn/components/bitrix/catalog/tours/bitrix/catalog.section.list/.default/style.css" => "17477411726236",]; ?>

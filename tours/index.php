@@ -210,7 +210,7 @@ $APPLICATION->SetTitle("Туры");
 		"USE_COMPARE" => "N",
 		"USE_ELEMENT_COUNTER" => "Y",
 		"USE_ENHANCED_ECOMMERCE" => "N",
-		"USE_FILTER" => "N",
+		"USE_FILTER" => "Y",
 		"USE_GIFTS_DETAIL" => "N",
 		"USE_GIFTS_MAIN_PR_SECTION_LIST" => "N",
 		"USE_GIFTS_SECTION" => "N",

@@ -1,7 +1,15 @@
-<div class="{{ $block->mod($mods ?? []) }}" style="background: url('{!! $pathPic !!}') #333 no-repeat center / cover;">
+<div class="{{ $block->mod($mods ?? []) }} swiper">
+    <div class="{{ $block->elem('wrapper') }} swiper-wrapper">
 
-    <div class="{{ $block->elem('inner') }} @if($class ?? false) {{ $class }}@endif">
-        <a class="{{ $block->elem('title') }}" href='<?= $url ?>'>{!! $name !!}</a>
-        <div class="{{ $block->elem('text') }}">{!! $text !!}</div>
+        @foreach($newslist as $news)
+        <div class="{{ $block->elem('news') }} swiper-slide" style="background: url('{!! $news['pathPic'] !!}') #333 no-repeat center / cover;">
+            <div class="{{ $block->elem('news-inner') }} {!! $news['class'] !!}">
+                <a class="{{ $block->elem('title') }}" href='{!!  $news["url"] !!}'>{!! $news['name'] !!}</a>
+                <div class="{{ $block->elem('text') }}">{!! $news['text'] !!}</div>
+            </div>
+        </div>
+        @endforeach
+
     </div>
+
 </div>

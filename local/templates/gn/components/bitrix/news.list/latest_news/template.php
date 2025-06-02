@@ -3,5 +3,5 @@
 <?
 echo \TAO::frontend()->renderBlock(
 	'news/news-lastnews',
-	$arResult["LAST-NEWS"]
+	['newslist' => $arResult["LAST-NEWS"]]
 ); ?>
