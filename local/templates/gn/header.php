@@ -17,7 +17,7 @@
 	$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/css/main.css');
 	?>
 	<? $APPLICATION->ShowHead(); ?>
-	<title><? $APPLICATION->ShowTitle(); ?></title>
+	<title><? $APPLICATION->ShowTitle(); ?> </title>
 
 </head>
 
