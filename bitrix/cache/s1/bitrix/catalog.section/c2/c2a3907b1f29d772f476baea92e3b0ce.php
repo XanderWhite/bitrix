@@ -1,7 +1,7 @@
 <?
 if($INCLUDE_FROM_CACHE!='Y')return false;
-$datecreate = '001748870658';
-$dateexpire = '001784870658';
+$datecreate = '001748934051';
+$dateexpire = '001784934051';
 $ser_content = 'a:2:{s:7:"CONTENT";s:26070:"	<div class="bx-section-desc bx-blue">
 		<p class="bx-section-desc-post"></p>
 	</div>

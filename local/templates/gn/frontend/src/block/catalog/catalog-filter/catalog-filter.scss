@@ -3,5 +3,104 @@
 $block-name: "b-catalog-filter";
 
 .#{$block-name} {
-	//
+	background-color: $color-accent;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 20px;
+	border-radius: 20px 0 0 20px;
+
+	&__title {
+		font-size: 20px;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	&__parameters {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__parameters-box-hint {
+		font-size: 18px;
+		cursor: pointer;
+	}
+
+	&__button {
+		transition: 0.3s;
+		border-radius: 8px;
+		text-decoration: none;
+		padding: 7px 15px;
+
+		&--reset {
+			background-color: $color-accent;
+			border: 2px solid $color-accent;
+			color: #fff;
+
+			&:hover {
+				background-color: #fff;
+				color: $color-accent;
+			}
+		}
+
+		&--apply {
+			background-color: #fff;
+			color: $color-accent;
+			border: 2px solid $color-accent;
+
+			&:hover {
+				color: #fff;
+				background-color: $color-accent;
+			}
+		}
+	}
+
+	&__popup#modef {
+		font-size: 16px;
+		border: 2px solid #fff;
+		color: #fff;
+		background-color: $color-accent;
+		box-shadow: 0 0 5px 0 black;
+		padding: 15px;
+		right: 100%;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+
+		& a {
+			display: block;
+			margin-top: 15px;
+			color: #fff;
+			text-align: center;
+
+			&:hover {
+				scale: 1.1;
+			}
+		}
+	}
+
+	&__checkboxes {
+		font-weight: 400;
+		padding: 10px;
+	}
+
+	&__label {
+		font-weight: 400;
+		padding: 0;
+	}
+
+	&__input-container {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
 }

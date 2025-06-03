@@ -10622,7 +10622,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var map = {
 	"./catalog-filter/catalog-filter.scss": "./src/block/catalog/catalog-filter/catalog-filter.scss",
-	"./catalog-filter_buttons/catalog-filter_buttons.scss": "./src/block/catalog/catalog-filter_buttons/catalog-filter_buttons.scss",
 	"./catalog-filter_checkboxes/catalog-filter_checkboxes.scss": "./src/block/catalog/catalog-filter_checkboxes/catalog-filter_checkboxes.scss"
 };
 
@@ -10652,22 +10651,6 @@ webpackContext.id = "./src/block/catalog sync recursive ^\\.\\/[^/]+\\/[^/.]+\\.
 /*!**************************************************************!*\
   !*** ./src/block/catalog/catalog-filter/catalog-filter.scss ***!
   \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
-
-/***/ }),
-
-/***/ "./src/block/catalog/catalog-filter_buttons/catalog-filter_buttons.scss":
-/*!******************************************************************************!*\
-  !*** ./src/block/catalog/catalog-filter_buttons/catalog-filter_buttons.scss ***!
-  \******************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -11427,4 +11410,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=index.1748850737741.js.map
+//# sourceMappingURL=index.1748933935260.js.map

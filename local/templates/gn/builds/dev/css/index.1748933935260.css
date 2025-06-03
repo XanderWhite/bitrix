@@ -1128,51 +1128,96 @@ div .bx-blue .btn.b-basket-button:hover {
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/catalog/catalog-filter/catalog-filter.scss ***!
   \*********************************************************************************************************************************************************************************************************************/
-
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/catalog/catalog-filter_buttons/catalog-filter_buttons.scss ***!
-  \*************************************************************************************************************************************************************************************************************************************/
-.b-catalog-filter_buttons__button {
+.b-catalog-filter {
+  background-color: rgb(132, 24, 68);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 20px 0 0 20px;
+}
+.b-catalog-filter__title {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.b-catalog-filter__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.b-catalog-filter__parameters {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.b-catalog-filter__parameters-box-hint {
+  font-size: 18px;
+  cursor: pointer;
+}
+.b-catalog-filter__button {
   transition: 0.3s;
-  border-radius: 3px;
+  border-radius: 8px;
   text-decoration: none;
   padding: 7px 15px;
 }
-.b-catalog-filter_buttons__button--apply {
+.b-catalog-filter__button--reset {
   background-color: rgb(132, 24, 68);
   border: 2px solid rgb(132, 24, 68);
   color: #fff;
 }
-.b-catalog-filter_buttons__button--apply:hover {
+.b-catalog-filter__button--reset:hover {
   background-color: #fff;
   color: rgb(132, 24, 68);
 }
-.b-catalog-filter_buttons__button--reset {
+.b-catalog-filter__button--apply {
   background-color: #fff;
   color: rgb(132, 24, 68);
   border: 2px solid rgb(132, 24, 68);
 }
-.b-catalog-filter_buttons__button--reset:hover {
+.b-catalog-filter__button--apply:hover {
   color: #fff;
   background-color: rgb(132, 24, 68);
 }
-/*!*******************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/catalog/catalog-filter_checkboxes/catalog-filter_checkboxes.scss ***!
-  \*******************************************************************************************************************************************************************************************************************************************/
-.b-catalog-filter_checkboxes {
-  background-color: rgb(132, 24, 68);
+.b-catalog-filter__popup#modef {
+  font-size: 16px;
+  border: 2px solid #fff;
   color: #fff;
+  background-color: rgb(132, 24, 68);
+  box-shadow: 0 0 5px 0 black;
+  padding: 15px;
+  right: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.b-catalog-filter__popup#modef a {
+  display: block;
+  margin-top: 15px;
+  color: #fff;
+  text-align: center;
+}
+.b-catalog-filter__popup#modef a:hover {
+  scale: 1.1;
+}
+.b-catalog-filter__checkboxes {
   font-weight: 400;
   padding: 10px;
 }
-.b-catalog-filter_checkboxes__label {
+.b-catalog-filter__label {
   font-weight: 400;
   padding: 0;
 }
-.b-catalog-filter_checkboxes__input-container {
+.b-catalog-filter__input-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/block/catalog/catalog-filter_checkboxes/catalog-filter_checkboxes.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
 
-/*# sourceMappingURL=index.1748850737741.css.map*/
+
+/*# sourceMappingURL=index.1748933935260.css.map*/

@@ -1,6 +1,6 @@
 <div class="<?php echo $block->mod($mods ?? []); ?>">
         <div class="<?php echo $block->elem('inner'); ?>">
-            <div class="<?php echo $block->elem('container'); ?>">
+            <div class="<?php echo $block->elem('container'); ?> ">
                 <div class="<?php echo $block->elem('buttons'); ?>">
                     <button class="<?php echo $block->elem('button'); ?> <?php echo $block->elem('button')->mod('apply'); ?>"
                         type="submit"
