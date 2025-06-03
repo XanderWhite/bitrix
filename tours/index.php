@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Туры");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	"tours", 
+	".default", 
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "N",
@@ -23,7 +23,7 @@ $APPLICATION->SetTitle("Туры");
 		"COMMON_ADD_TO_BASKET_ACTION" => "ADD",
 		"COMMON_SHOW_CLOSE_POPUP" => "N",
 		"COMPATIBLE_MODE" => "N",
-		"COMPONENT_TEMPLATE" => "tours",
+		"COMPONENT_TEMPLATE" => ".default",
 		"CONVERT_CURRENCY" => "N",
 		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
 		"DETAIL_ADD_TO_BASKET_ACTION" => array(
